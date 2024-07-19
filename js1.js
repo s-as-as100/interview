@@ -90,16 +90,123 @@
 // console.log(typeof myClass ,"hello");
 
 
- const myPromise = new Promise((res,rej) =>{
-    document.getElementById('btn').addEventListener('click', () => {
-        res("complete")
+//  const myPromise = new Promise((res,rej) =>{
+//     document.getElementById('btn').addEventListener('click', () => {
+//         res("complete")
     
-    });
-    document.getElementById('btn2').addEventListener('click', () => {
-        rej("reject due to some error")
+//     });
+//     document.getElementById('btn2').addEventListener('click', () => {
+//         rej("reject due to some error")
     
-    });
+//     });
 
- })
+//  })
 
-myPromise.then(res => console.log(res))
+// myPromise.then(res => console.log(res))
+
+
+//create a promise without promise keyword
+
+
+
+// async function promiseWithout() {
+// return await myPromise;
+
+
+
+// //   return "arif";
+// }
+
+// const response = promiseWithout();
+// console.log(response,"response")
+
+
+const obj =  [
+    {
+        key:'sample1',
+        data:'data1'
+    },
+    {
+        key:'sample1',
+        data:'data1'
+    },
+    {
+        key:'sample1',
+        data:'data1'
+    },
+    {
+        key:'sample3',
+        data:'data3'
+    },
+    {
+        key:'sample4',
+        data:'data4'
+    },
+    {
+        key:'sample2',
+        data:'data2'
+    },
+    {
+        key:'sample2',
+        data:'data2'
+    },   
+];
+
+
+// const output ={};
+
+// obj.forEach((item) =>{
+//     if(output[item.key]) {
+//          output[item.key].push(item)
+//     }
+//     else {
+//         output[item.key] =[item];
+//     }
+// });
+
+
+
+
+// console.log(output,"output")
+
+
+// function getAge(...args) {
+//  console.log(typeof args)
+// }
+
+// getAge(41)
+
+
+
+
+
+// const output = {
+//     'sample1': [
+//         {
+//             key:'sample1',
+//             data:'data1'
+//         },
+//         {
+//             key:'sample1',
+//             data:'data1'
+//         },
+//         {
+//             key:'sample1',
+//             data:'data1'
+//         }, 
+//     ],
+//     'sample2':[
+//         {
+//             key:'sample2',
+//             data:'data2'
+//         },
+//         {
+//             key:'sample2',
+//             data:'data2'
+//         }, 
+//     ]
+// }
+
+
+console.log(1>2>3,"hello");
+console.log(2<3<4)
