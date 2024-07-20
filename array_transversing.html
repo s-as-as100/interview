@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [2, 3, 4, 9, 5, 43, 6, 55, 1];
+
+      function getAccessValue() {
+        let el = document.getElementById("element").value;
+        if (el < array.length && typeof parseInt(el) === "number" && el > 0) {
+          alert(array[el]);
+        } else {
+          alert("Please enter valid value");
+        }
+      }
+
+      for (let i = 0; i < array.length; i++) {
+        // document.write(`Array element of ${array[i]} <br/>`)
+      }
+    </script>
+
+    <input id="element" type="text" />
+    <button onclick="getAccessValue()">Submit</button>
+  </body>
+</html>
