@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // insert new element on specific index in the array ;
+
+      //   let array = [12, 23, 34, 4, 51];
+      //   let newElement = 43;
+      //   let position = 1;
+
+      //   for (let i = array.length - 1; i >= 0; i--) {
+      //     console.log(array[i]);
+      //     if (i >= position) {
+      //       array[i + 1] = array[i];
+      //       if (i === position) {
+      //         array[i] = newElement;
+      //       }
+      //     }
+      //   }
+      //   console.log(array);
+
+      function insertElemen() {
+        let array = [12, 23, 34, 4, 51];
+        let newElement = document.getElementById("value").value;
+        newElement = parseInt(newElement);
+        let position = document.getElementById("position").value;
+        console.log(newElement, position, "position");
+        if (
+          isNaN(newElement) ||
+          isNaN(position) ||
+          position < 0 ||
+          position > array.length
+        ) {
+          console.log("Invalid input");
+          return;
+        }
+
+        // for (let i = array.length - 1; i >= 0; i--) {
+        //   if (i >= position) {
+        //     array[i + 1] = array[i];
+        //     if (i === position) {
+        //       array[i] = newElement;
+        //     }
+        //   }
+        // }
+        for (let i = array.length; i > position; i--) {
+          array[i] = array[i - 1];
+        }
+
+        array[position] = newElement;
+
+        console.log(array);
+        console.log(array);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter position" id="position" />
+    <input type="text" placeholder="enter value" id="value" />
+
+    <button onclick="insertElemen()">Insert</button>
+  </body>
+</html>
