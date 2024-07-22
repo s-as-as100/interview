@@ -256,11 +256,53 @@ const removeDublicate = [...new Set(sortValue)];
 
 // swap 2 numbers
 
-let num1=2;
-let num2= 3;
-let temp =num1;
-num1= num2;
-num2= temp
+// let num1=2;
+// let num2= 3;
+// let temp =num1;
+// num1= num2;
+// num2= temp
 // [num1,num2]= [num2,num1]
-console.log(num1,num2)
+// console.log(num1,num2)
+
+
+//for of for [array,Map,Set ,String] to iterate over values;
+
+// for .. in for an array to iterate over a key
+// for .. in for object to enumerate its (object's ) properties
+
+
+// pass by value are premitive data type and indepent each other
+
+// example;
+
+let a =9;
+let b=1;
+b= 1+10;
+// console.log(a,b)
+
+// pass by reference are non premitive its refer only reference of array or object not copy;
+
+
+// let obj ={
+//     a:1,
+//     b:2
+// }
+// let obj2= obj
+//  obj2.a=5;
+// console.log(obj,obj2);
+
+// let array4 =[1,2,3,4];
+// let array5 =array4;
+// array5.push(2);
+// console.log(array4,array5)
+
+
+//reverse the integer number
+
+
+let a1=123;
+
+
+
+
 
