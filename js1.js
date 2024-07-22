@@ -300,9 +300,22 @@ b= 1+10;
 //reverse the integer number
 
 
-let a1=123;
+// let a1=123;
 
+function reverNumber(num) {
+  
+    let my = num.toString().split("").reverse().join("");
+    if(my.endsWith("-")){
+        my = "-" + my;
 
+    }
+    else{
+       return parseInt(my)
+
+    }
+}
+
+console.log(reverNumber(123))
 
 
 
