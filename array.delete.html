@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // remove specific element from array
+
+      //   let array = [1, 3, 4, 7, 8, 4];
+      //   let position = 1;
+
+      //   for (let i = position; i < array.length - 1; i++) {
+      //     array[i] = array[i + 1];
+      //   }
+      //   array.length = array.length - 1;
+      //   console.log(array, "array");
+
+      function removeElement() {
+        let array = [1, 3, 4, 7, 8, 4];
+        let position = document.getElementById("remove").value;
+        position = parseInt(position);
+
+        for (let i = position; i < array.length - 1; i++) {
+          array[i] = array[i + 1];
+        }
+        array.length = array.length - 1;
+        console.log(array, "array");
+      }
+    </script>
+
+    <input placeholder="enter position" id="remove" />
+    <button onclick="removeElement()">remove</button>
+  </body>
+</html>
