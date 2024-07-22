@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const no_count_div = document.querySelector(".n_count");
+      const t_count_div = document.querySelector(".t_count");
+      let count = 0;
+      const showCount = () => {
+        count++;
+        no_count_div.innerHTML = `normal Count ${count}`;
+      };
+
+      const throttlecount = () => {
+        let scorll = true;
+        showCount();
+        setTimeout(() => {
+          count++;
+          scorll = false;
+        }, 1000);
+      };
+    </script>
+    <div>
+      <h1>Normal Count</h1>
+      <h1>Throttle count</h1>
+    </div>
+  </body>
+</html>
