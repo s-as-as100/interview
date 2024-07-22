@@ -251,4 +251,16 @@ const sortValue = array3.sort((a,b) => a-b);
 // console.log(sortValue)
 
 const removeDublicate = [...new Set(sortValue)];
-console.log(removeDublicate)
+// console.log(removeDublicate)
+
+
+// swap 2 numbers
+
+let num1=2;
+let num2= 3;
+let temp =num1;
+num1= num2;
+num2= temp
+// [num1,num2]= [num2,num1]
+console.log(num1,num2)
+
