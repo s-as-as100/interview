@@ -121,36 +121,36 @@
 // console.log(response,"response")
 
 
-const obj =  [
-    {
-        key:'sample1',
-        data:'data1'
-    },
-    {
-        key:'sample1',
-        data:'data1'
-    },
-    {
-        key:'sample1',
-        data:'data1'
-    },
-    {
-        key:'sample3',
-        data:'data3'
-    },
-    {
-        key:'sample4',
-        data:'data4'
-    },
-    {
-        key:'sample2',
-        data:'data2'
-    },
-    {
-        key:'sample2',
-        data:'data2'
-    },   
-];
+// const obj =  [
+//     {
+//         key:'sample1',
+//         data:'data1'
+//     },
+//     {
+//         key:'sample1',
+//         data:'data1'
+//     },
+//     {
+//         key:'sample1',
+//         data:'data1'
+//     },
+//     {
+//         key:'sample3',
+//         data:'data3'
+//     },
+//     {
+//         key:'sample4',
+//         data:'data4'
+//     },
+//     {
+//         key:'sample2',
+//         data:'data2'
+//     },
+//     {
+//         key:'sample2',
+//         data:'data2'
+//     },   
+// ];
 
 
 // const output ={};
@@ -208,5 +208,20 @@ const obj =  [
 // }
 
 
-console.log(1>2>3,"hello");
-console.log(2<3<4)
+// console.log(1>2>3,"hello");
+// console.log(2<3<4)
+
+// remove all null and undefine property from the object
+
+const obj = {
+    a:1,
+    b:null,
+    c:undefined,
+    d:'hello'
+
+}
+
+const objToArray = Object.values(obj);
+console.log(objToArray,"objToarry")
+const result =objToArray.filter((item)=>item!=null);
+console.log(result,"result")
