@@ -229,10 +229,26 @@
 
 // find the largest and smallest number in the array
 
-let array  = [3,5,6,7,1,55,22,4,3,9];
+// let array  = [3,5,6,7,1,55,22,4,3,9];
 
-// compare value and store then compare ;
+// // compare value and store then compare ;
  
-const result = array.reduce((smallValue,num) => Math.min(smallValue,num));
-console.log(result,"Re")
+// const result = array.reduce((smallValue,num) => Math.min(smallValue,num));
+// console.log(result,"Re")
  
+
+
+// merge two array and sort  then  remove dublicate
+
+let array1 =[1,3,4,5,5,6,2];
+let array2 = [7,6,9,1,7,3];
+
+let array3 = [...array1, ...array2];
+// console.log(array3);
+
+// for ascending order
+const sortValue = array3.sort((a,b) => a-b);
+// console.log(sortValue)
+
+const removeDublicate = [...new Set(sortValue)];
+console.log(removeDublicate)
