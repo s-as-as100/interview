@@ -213,15 +213,26 @@
 
 // remove all null and undefine property from the object
 
-const obj = {
-    a:1,
-    b:null,
-    c:undefined,
-    d:'hello'
+// const obj = {
+//     a:1,
+//     b:null,
+//     c:undefined,
+//     d:'hello'
 
-}
+// }
 
-const objToArray = Object.values(obj);
-console.log(objToArray,"objToarry")
-const result =objToArray.filter((item)=>item!=null);
-console.log(result,"result")
+// const objToArray = Object.values(obj);
+// console.log(objToArray,"objToarry")
+// const result =objToArray.filter((item)=>item!=null);
+// console.log(result,"result")
+
+
+// find the largest and smallest number in the array
+
+let array  = [3,5,6,7,1,55,22,4,3,9];
+
+// compare value and store then compare ;
+ 
+const result = array.reduce((smallValue,num) => Math.min(smallValue,num));
+console.log(result,"Re")
+ 
