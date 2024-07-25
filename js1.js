@@ -302,20 +302,30 @@ b= 1+10;
 
 // let a1=123;
 
-function reverNumber(num) {
+// function reverNumber(num) {
   
-    let my = num.toString().split("").reverse().join("");
-    if(my.endsWith("-")){
-        my = "-" + my;
+//     let my = num.toString().split("").reverse().join("");
+//     if(my.endsWith("-")){
+//         my = "-" + my;
 
-    }
-    else{
-       return parseInt(my)
+//     }
+//     else{
+//        return parseInt(my)
 
-    }
+//     }
+// }
+
+// console.log(reverNumber(123))
+
+
+// factorail of number ;
+let num=5;
+for(var fact=1; num>1;num--){
+    fact= fact *num
 }
 
-console.log(reverNumber(123))
 
+
+console.log(fact)
 
 
