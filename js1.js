@@ -240,17 +240,17 @@
 
 // merge two array and sort  then  remove dublicate
 
-let array1 =[1,3,4,5,5,6,2];
-let array2 = [7,6,9,1,7,3];
+// let array1 =[1,3,4,5,5,6,2];
+// let array2 = [7,6,9,1,7,3];
 
-let array3 = [...array1, ...array2];
+// let array3 = [...array1, ...array2];
 // console.log(array3);
 
 // for ascending order
-const sortValue = array3.sort((a,b) => a-b);
+// const sortValue = array3.sort((a,b) => a-b);
 // console.log(sortValue)
 
-const removeDublicate = [...new Set(sortValue)];
+// const removeDublicate = [...new Set(sortValue)];
 // console.log(removeDublicate)
 
 
@@ -275,9 +275,9 @@ const removeDublicate = [...new Set(sortValue)];
 
 // example;
 
-let a =9;
-let b=1;
-b= 1+10;
+// let a =9;
+// let b=1;
+// b= 1+10;
 // console.log(a,b)
 
 // pass by reference are non premitive its refer only reference of array or object not copy;
@@ -319,13 +319,46 @@ b= 1+10;
 
 
 // factorail of number ;
-let num=5;
-for(var fact=1; num>1;num--){
-    fact= fact *num
-}
+// let num=5;
+// for(var fact=1; num>1;num--){
+//     fact= fact *num
+// }
 
 
 
-console.log(fact)
+// console.log(fact)
+
+// const arr8 =[1,2,3,4];
+// const array9 =[2,3,5,9];
+// const newArray  = [...arr8,...array9]
+// const result = [...new Set(newArray)];
+// console.log(result)
+
+
+// remove and find unique element ?
+
+
+const array1 = [1,2,4,6,3];
+const array2 = [8,7,1,2,4];
+
+// const result = array1.filter((item) => array2.indexOf(item)===-1);
+// console.log(result,"result")
+
+
+// remove dublicate element from the array ? 
+
+const removeElementFromArray1 = array1.filter((item) => !array2.includes(item));
+const removeElementFromArray2 = array2.filter((item) => !array1.includes(item));
+console.log(removeElementFromArray2)
+console.log(removeElementFromArray1)
+const finalResult = [...removeElementFromArray1,...removeElementFromArray2];
+console.log(finalResult,"final")
+
+
+
+
+
+ 
+
 
 
