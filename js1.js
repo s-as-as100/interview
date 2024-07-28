@@ -347,18 +347,43 @@ const array2 = [8,7,1,2,4];
 
 // remove dublicate element from the array ? 
 
-const removeElementFromArray1 = array1.filter((item) => !array2.includes(item));
-const removeElementFromArray2 = array2.filter((item) => !array1.includes(item));
-console.log(removeElementFromArray2)
-console.log(removeElementFromArray1)
-const finalResult = [...removeElementFromArray1,...removeElementFromArray2];
-console.log(finalResult,"final")
+// const removeElementFromArray1 = array1.filter((item) => !array2.includes(item));
+// const removeElementFromArray2 = array2.filter((item) => !array1.includes(item));
+// console.log(removeElementFromArray2)
+// console.log(removeElementFromArray1)
+// const finalResult = [...removeElementFromArray1,...removeElementFromArray2];
+// console.log(finalResult,"final")
 
 
+// use strict in js
+
+// sum(1,2)
+
+// function sum(a,a) {
+//     console.log('add' ,a+a)
+// }
+
+// error without use strict 4;
 
 
+// hoc vs callback ;
 
+
+// add is callback
+const add =  (a,b) => {
+    return a+b;
+}
+
+const sub =(a,b) =>{
+    return a-b;
+}
+
+
+const calulator =(a,b,callBackFunction) =>{
+    return callBackFunction(a,b)
+}
  
-
+// calculator is hoc
+calulator(2,3,add)
 
 
