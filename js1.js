@@ -370,20 +370,45 @@ const array2 = [8,7,1,2,4];
 
 
 // add is callback
-const add =  (a,b) => {
-    return a+b;
-}
+// const add =  (a,b) => {
+//     return a+b;
+// }
 
-const sub =(a,b) =>{
-    return a-b;
-}
+// const sub =(a,b) =>{
+//     return a-b;
+// }
 
 
-const calulator =(a,b,callBackFunction) =>{
-    return callBackFunction(a,b)
-}
+// const calulator =(a,b,callBackFunction) =>{
+//     return callBackFunction(a,b)
+// }
  
-// calculator is hoc
-calulator(2,3,add)
+// // calculator is hoc
+// calulator(2,3,add)
 
+
+// (function() {
+//   var a=b=3
+// }
+// )();
+// (function() {
+//  a=b=3 // now both is global scope
+// }
+// )();
+
+// console.log(typeof a); // undefined because a is used var is functional scope
+// console.log(typeof b) // number like b=3 is like global access
+
+const array  = [1,3,1,1,2,3,7,8];
+// remove dublicate elements ;
+// const result = [...new Set(array)];
+// console.log(result)
+
+ 
+const result = array.filter((item, index) => {
+    console.log(array.indexOf(item) === index)
+    console.log(array.indexOf(item),index)
+  return array.indexOf(item) === index;
+});
+// console.log(result)
 
