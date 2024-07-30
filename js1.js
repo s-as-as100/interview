@@ -1,8 +1,5 @@
-
 // var sum  = function(a) {
 //     console.log("Live Viewers" +a);
-
-    
 
 // }
 
@@ -15,16 +12,12 @@
 //     console.log("object")
 // }
 
-
 // console.log(testCode())
 
-
-
-// Use Cases 
+// Use Cases
 // 1. Write the code to get array of names from given array of users
 // 2. Get back Only active users
-// 3. Sort users by age descending 
-
+// 3. Sort users by age descending
 
 // const users = [
 //     {
@@ -52,19 +45,18 @@
 //         age:30
 //     }
 
-// ]  
+// ]
 
 // const names=[];
 // // for(let i=0;i< users.length;i++) {
 // //           names.push(users[i].name)
-    
+
 // // }
 // for(let i=0; i<users.length;i++){
 //     if(users[i].isActive){
 //         names.push(users[i].name)
 //     }
 // }
-
 
 // // using for each
 
@@ -76,9 +68,6 @@
 
 // console.log(names,"arraynames ");
 
-
-
-
 // function myFuntion() {
 
 // }
@@ -89,37 +78,30 @@
 
 // console.log(typeof myClass ,"hello");
 
-
 //  const myPromise = new Promise((res,rej) =>{
 //     document.getElementById('btn').addEventListener('click', () => {
 //         res("complete")
-    
+
 //     });
 //     document.getElementById('btn2').addEventListener('click', () => {
 //         rej("reject due to some error")
-    
+
 //     });
 
 //  })
 
 // myPromise.then(res => console.log(res))
 
-
 //create a promise without promise keyword
-
-
 
 // async function promiseWithout() {
 // return await myPromise;
-
-
 
 // //   return "arif";
 // }
 
 // const response = promiseWithout();
 // console.log(response,"response")
-
 
 // const obj =  [
 //     {
@@ -149,9 +131,8 @@
 //     {
 //         key:'sample2',
 //         data:'data2'
-//     },   
+//     },
 // ];
-
 
 // const output ={};
 
@@ -164,21 +145,13 @@
 //     }
 // });
 
-
-
-
 // console.log(output,"output")
-
 
 // function getAge(...args) {
 //  console.log(typeof args)
 // }
 
 // getAge(41)
-
-
-
-
 
 // const output = {
 //     'sample1': [
@@ -193,7 +166,7 @@
 //         {
 //             key:'sample1',
 //             data:'data1'
-//         }, 
+//         },
 //     ],
 //     'sample2':[
 //         {
@@ -203,10 +176,9 @@
 //         {
 //             key:'sample2',
 //             data:'data2'
-//         }, 
+//         },
 //     ]
 // }
-
 
 // console.log(1>2>3,"hello");
 // console.log(2<3<4)
@@ -226,17 +198,14 @@
 // const result =objToArray.filter((item)=>item!=null);
 // console.log(result,"result")
 
-
 // find the largest and smallest number in the array
 
 // let array  = [3,5,6,7,1,55,22,4,3,9];
 
 // // compare value and store then compare ;
- 
+
 // const result = array.reduce((smallValue,num) => Math.min(smallValue,num));
 // console.log(result,"Re")
- 
-
 
 // merge two array and sort  then  remove dublicate
 
@@ -253,7 +222,6 @@
 // const removeDublicate = [...new Set(sortValue)];
 // console.log(removeDublicate)
 
-
 // swap 2 numbers
 
 // let num1=2;
@@ -264,12 +232,10 @@
 // [num1,num2]= [num2,num1]
 // console.log(num1,num2)
 
-
 //for of for [array,Map,Set ,String] to iterate over values;
 
 // for .. in for an array to iterate over a key
 // for .. in for object to enumerate its (object's ) properties
-
 
 // pass by value are premitive data type and indepent each other
 
@@ -281,7 +247,6 @@
 // console.log(a,b)
 
 // pass by reference are non premitive its refer only reference of array or object not copy;
-
 
 // let obj ={
 //     a:1,
@@ -296,14 +261,12 @@
 // array5.push(2);
 // console.log(array4,array5)
 
-
 //reverse the integer number
-
 
 // let a1=123;
 
 // function reverNumber(num) {
-  
+
 //     let my = num.toString().split("").reverse().join("");
 //     if(my.endsWith("-")){
 //         my = "-" + my;
@@ -317,14 +280,11 @@
 
 // console.log(reverNumber(123))
 
-
 // factorail of number ;
 // let num=5;
 // for(var fact=1; num>1;num--){
 //     fact= fact *num
 // }
-
-
 
 // console.log(fact)
 
@@ -334,18 +294,15 @@
 // const result = [...new Set(newArray)];
 // console.log(result)
 
-
 // remove and find unique element ?
 
-
-const array1 = [1,2,4,6,3];
-const array2 = [8,7,1,2,4];
+const array1 = [1, 2, 4, 6, 3];
+const array2 = [8, 7, 1, 2, 4];
 
 // const result = array1.filter((item) => array2.indexOf(item)===-1);
 // console.log(result,"result")
 
-
-// remove dublicate element from the array ? 
+// remove dublicate element from the array ?
 
 // const removeElementFromArray1 = array1.filter((item) => !array2.includes(item));
 // const removeElementFromArray2 = array2.filter((item) => !array1.includes(item));
@@ -353,7 +310,6 @@ const array2 = [8,7,1,2,4];
 // console.log(removeElementFromArray1)
 // const finalResult = [...removeElementFromArray1,...removeElementFromArray2];
 // console.log(finalResult,"final")
-
 
 // use strict in js
 
@@ -365,9 +321,7 @@ const array2 = [8,7,1,2,4];
 
 // error without use strict 4;
 
-
 // hoc vs callback ;
-
 
 // add is callback
 // const add =  (a,b) => {
@@ -378,14 +332,12 @@ const array2 = [8,7,1,2,4];
 //     return a-b;
 // }
 
-
 // const calulator =(a,b,callBackFunction) =>{
 //     return callBackFunction(a,b)
 // }
- 
+
 // // calculator is hoc
 // calulator(2,3,add)
-
 
 // (function() {
 //   var a=b=3
@@ -404,7 +356,6 @@ const array2 = [8,7,1,2,4];
 // const result = [...new Set(array)];
 // console.log(result)
 
- 
 // const result = array.filter((item, index) => {
 //     console.log(array.indexOf(item) === index)
 //     console.log(array.indexOf(item),index)
@@ -412,10 +363,8 @@ const array2 = [8,7,1,2,4];
 // });
 // console.log(result)
 
-
 // function declaration is hoisted
 // function expression is not hoisted
-
 
 // test();
 // test2()
@@ -424,20 +373,48 @@ const array2 = [8,7,1,2,4];
 // console.log('function declaration')
 // }
 
-
 // var test2 = function() {
 //     console.log('function expression')
 // }
 
+// let test = new Promise(function(resolve,reject){
+//     setTimeout(() =>{
+//        resolve('resolve')
+//     },1000)
+// }).then((data) =>{
+//     console.log(data)
+// }).finally(() =>{
+//     console.log('finally')
+// })
 
-let test = new Promise(function(resolve,reject){
-    setTimeout(() =>{
-       resolve('resolve')
-    },1000)
-}).then((data) =>{
-    console.log(data)
-}).finally(() =>{
-    console.log('finally')
-})
+// let dat = [1,3,7,23,2]
+// dat.sort((a,b) =>a-b);
+// console.log(dat)
+// dat.sort((a,b)=>b-a);
+// console.log(dat)
 
+// closue and lexical scope;
 
+// lexical scope
+// function hello() {
+//   var c = 10;
+
+//   function innerFunction() {
+//     return c;
+//   }
+//   return innerFunction();
+// }
+
+// console.log(hello());
+
+// closure
+function hello() {
+  var c = 10;
+
+  function innerFunction() {
+    return c;
+  }
+  return innerFunction;
+}
+var inner =hello()
+console.log(inner());
