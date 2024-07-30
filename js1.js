@@ -296,8 +296,8 @@
 
 // remove and find unique element ?
 
-const array1 = [1, 2, 4, 6, 3];
-const array2 = [8, 7, 1, 2, 4];
+// const array1 = [1, 2, 4, 6, 3];
+// const array2 = [8, 7, 1, 2, 4];
 
 // const result = array1.filter((item) => array2.indexOf(item)===-1);
 // console.log(result,"result")
@@ -408,13 +408,35 @@ const array2 = [8, 7, 1, 2, 4];
 // console.log(hello());
 
 // closure
-function hello() {
-  var c = 10;
+// function hello() {
+//   var c = 10;
 
-  function innerFunction() {
-    return c;
-  }
-  return innerFunction;
+//   function innerFunction() {
+//     return c;
+//   }
+//   return innerFunction;
+// }
+// var inner =hello()
+// console.log(inner());
+
+
+// Event propagation ?
+
+// The Event Propagation mode determines in which order the 
+// elements receive the event ?
+
+// window > document > <html> > <body> > <div> > <button>  * target phase
+// bottom to top event called bubble phase ( by default)
+// top to bottom eveent called capture phase
+
+
+
+
+function foo() {
+
+    return {
+      message:'he;;p'
+    }
 }
-var inner =hello()
-console.log(inner());
+
+console.log(foo())
