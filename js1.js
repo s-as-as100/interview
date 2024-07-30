@@ -417,14 +417,27 @@ const array2 = [8,7,1,2,4];
 // function expression is not hoisted
 
 
-test();
-test2()
+// test();
+// test2()
 
-function test() {
-console.log('function declaration')
-}
+// function test() {
+// console.log('function declaration')
+// }
 
 
-var test2 = function() {
-    console.log('function expression')
-}
+// var test2 = function() {
+//     console.log('function expression')
+// }
+
+
+let test = new Promise(function(resolve,reject){
+    setTimeout(() =>{
+       resolve('resolve')
+    },1000)
+}).then((data) =>{
+    console.log(data)
+}).finally(() =>{
+    console.log('finally')
+})
+
+
