@@ -399,16 +399,32 @@ const array2 = [8,7,1,2,4];
 // console.log(typeof a); // undefined because a is used var is functional scope
 // console.log(typeof b) // number like b=3 is like global access
 
-const array  = [1,3,1,1,2,3,7,8];
+// const array  = [1,3,1,1,2,3,7,8];
 // remove dublicate elements ;
 // const result = [...new Set(array)];
 // console.log(result)
 
  
-const result = array.filter((item, index) => {
-    console.log(array.indexOf(item) === index)
-    console.log(array.indexOf(item),index)
-  return array.indexOf(item) === index;
-});
+// const result = array.filter((item, index) => {
+//     console.log(array.indexOf(item) === index)
+//     console.log(array.indexOf(item),index)
+//   return array.indexOf(item) === index;
+// });
 // console.log(result)
 
+
+// function declaration is hoisted
+// function expression is not hoisted
+
+
+test();
+test2()
+
+function test() {
+console.log('function declaration')
+}
+
+
+var test2 = function() {
+    console.log('function expression')
+}
