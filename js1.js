@@ -444,3 +444,12 @@
 
 console.log(typeof null);  // object --> this is a javascript bug
 console.log(typeof undefined)  // undefined --> type undefined
+
+// wa function to reverse the string;
+
+
+function reverseString(str) {
+    return str.split("").reverse().join("")
+}
+ 
+console.log(reverseString("iloveyou"))
