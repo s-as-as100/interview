@@ -432,11 +432,15 @@
 
 
 
-function foo() {
+// function foo() {
 
-    return {
-      message:'he;;p'
-    }
-}
+//     return
+//  {
+//       message:'he;;p'
+//     }
+// }
 
-console.log(foo())
+// console.log(foo())  // undefined
+
+console.log(typeof null);  // object --> this is a javascript bug
+console.log(typeof undefined)  // undefined --> type undefined
