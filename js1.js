@@ -457,10 +457,33 @@ console.log(typeof undefined)  // undefined --> type undefined
 
 // wa funtion to find the number of character in a string;
 
-function countCharacters(str) {
-    return str.length;
-}
+// function countCharacters(str) {
+//     return str.length;
+// }
 
-console.log(countCharacters("iloveyou"));
+// console.log(countCharacters("iloveyou"));
 
 // wa function to find the maximum value from an object
+
+
+function maxValueFromObject(obj) {
+    // convert into array
+    const values = Object.values(obj);
+    // console.log(array,"aa")
+    const maxValue = Math.max(...values);
+    return maxValue;
+    
+
+
+}
+
+
+let data = {
+    a:2,
+    b:5,
+    c:45,
+    d:1
+}
+
+console.log(maxValueFromObject(data)
+)
