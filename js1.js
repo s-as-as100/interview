@@ -419,18 +419,14 @@
 // var inner =hello()
 // console.log(inner());
 
-
 // Event propagation ?
 
-// The Event Propagation mode determines in which order the 
+// The Event Propagation mode determines in which order the
 // elements receive the event ?
 
 // window > document > <html> > <body> > <div> > <button>  * target phase
 // bottom to top event called bubble phase ( by default)
 // top to bottom eveent called capture phase
-
-
-
 
 // function foo() {
 
@@ -442,18 +438,16 @@
 
 // console.log(foo())  // undefined
 
-console.log(typeof null);  // object --> this is a javascript bug
-console.log(typeof undefined)  // undefined --> type undefined
+console.log(typeof null); // object --> this is a javascript bug
+console.log(typeof undefined); // undefined --> type undefined
 
 // wa function to reverse the string;
-
 
 // function reverseString(str) {
 //     return str.split("").reverse().join("")
 // }
- 
-// console.log(reverseString("iloveyou"))
 
+// console.log(reverseString("iloveyou"))
 
 // wa funtion to find the number of character in a string;
 
@@ -465,25 +459,19 @@ console.log(typeof undefined)  // undefined --> type undefined
 
 // wa function to find the maximum value from an object
 
-
 function maxValueFromObject(obj) {
-    // convert into array
-    const values = Object.values(obj);
-    // console.log(array,"aa")
-    const maxValue = Math.max(...values);
-    return maxValue;
-    
-
-
+  // convert into array
+  const values = Object.values(obj);
+  // console.log(array,"aa")
+  const maxValue = Math.max(...values);
+  return maxValue;
 }
-
 
 let data = {
-    a:2,
-    b:5,
-    c:45,
-    d:1
-}
+  a: 2,
+  b: 5,
+  c: 45,
+  d: 1,
+};
 
-console.log(maxValueFromObject(data)
-)
+console.log(maxValueFromObject(data));
