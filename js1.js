@@ -485,13 +485,43 @@ console.log(typeof undefined); // undefined --> type undefined
 // console.log(String)
 // console.log(String.prototype)
 
-String.prototype.repeatify = function(times) {
+// String.prototype.repeatify = function(times) {
 
-    if(typeof times !=='number'|| times<1) {
-        throw new Error('Please provide positive integrer for repetition')
+//     if(typeof times !=='number'|| times<1) {
+//         throw new Error('Please provide positive integrer for repetition')
+//     }
+//     return this.repeat(times)
+// }
+
+// const str= 'sir';
+// console.log(str.repeatify(3))
+
+
+
+// Inheritance in javascript ?
+
+// inheritance allows one object to access properties and method of another objects. 
+
+
+// Every Javascript object has a prototype , which is another object that it inherits 
+// properties and methods from . 
+
+// When you try to access a property or method on an object , js first looks at the object itself,
+// 
+
+
+const animal = {
+    type:'animal',
+    makeSound: function() {
+        console.log('wooooo')
     }
-    return this.repeat(times)
+
 }
 
-const str= 'sir';
-console.log(str.repeatify(3))
+// create a new object 
+
+const dog = Object.create(animal)
+
+dog.breed= 'labrador';
+
+console.log(dog)
