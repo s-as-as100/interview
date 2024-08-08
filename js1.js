@@ -459,19 +459,39 @@ console.log(typeof undefined); // undefined --> type undefined
 
 // wa function to find the maximum value from an object
 
-function maxValueFromObject(obj) {
-  // convert into array
-  const values = Object.values(obj);
-  // console.log(array,"aa")
-  const maxValue = Math.max(...values);
-  return maxValue;
+// function maxValueFromObject(obj) {
+//   // convert into array
+//   const values = Object.values(obj);
+//   // console.log(array,"aa")
+//   const maxValue = Math.max(...values);
+//   return maxValue;
+// }
+
+// let data = {
+//   a: 2,
+//   b: 5,
+//   c: 45,
+//   d: 1,
+// };
+
+// console.log(maxValueFromObject(data));
+
+// create your own string method 'repeatify(3)'  the input string will be repeated three times
+
+
+
+// Define the custom repactify 
+
+// console.log(String)
+// console.log(String.prototype)
+
+String.prototype.repeatify = function(times) {
+
+    if(typeof times !=='number'|| times<1) {
+        throw new Error('Please provide positive integrer for repetition')
+    }
+    return this.repeat(times)
 }
 
-let data = {
-  a: 2,
-  b: 5,
-  c: 45,
-  d: 1,
-};
-
-console.log(maxValueFromObject(data));
+const str= 'sir';
+console.log(str.repeatify(3))
