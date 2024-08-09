@@ -510,18 +510,18 @@ console.log(typeof undefined); // undefined --> type undefined
 // 
 
 
-const animal = {
-    type:'animal',
-    makeSound: function() {
-        console.log('wooooo')
-    }
+// const animal = {
+//     type:'animal',
+//     makeSound: function() {
+//         console.log('wooooo')
+//     }
 
-}
+// }
 
 // create a new object 
 
-const dog = Object.create(animal)
+// const dog = Object.create(animal)
 
-dog.breed= 'labrador';
+// dog.breed= 'labrador';
 
-console.log(dog)
+// console.log(dog)
