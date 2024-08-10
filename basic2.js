@@ -1,88 +1,137 @@
-// closures
-// A close refers to the ability of a function to
+// // closures
+// // A close refers to the ability of a function to
 
-// > remember its lexical parents scope
-// has read / write access to variables defined in the parent environment ;
+// // > remember its lexical parents scope
+// // has read / write access to variables defined in the parent environment ;
 
-function a() {
-  var x = 6;
-  return function () {
-    console.log(x);
-  };
-}
-var x = 10;
-const b = a();
-b();
+// function a() {
+//   var x = 6;
+//   return function () {
+//     console.log(x);
+//   };
+// }
+// var x = 10;
+// const b = a();
+// b();
 
-//where is it used
+// //where is it used
 
-// Event handlers
+// // Event handlers
 
-// let countClicked =0;
-//  mybutton.addEventilister('click', () =>{
-//     countClicked++
-//  })
+// // let countClicked =0;
+// //  mybutton.addEventilister('click', () =>{
+// //     countClicked++
+// //  })
 
-// callbacks
+// // callbacks
 
-// const message = 'hello' ;
+// // const message = 'hello' ;
+// // setTimeout(() => {
+// //     console.log(message)
+// // }, 1000);
+
+// let count = 0;
+
 // setTimeout(() => {
-//     console.log(message)
+//   count++;
+//   console.log(`in settimeout - ${count}`); // 1
 // }, 1000);
 
-let count = 0;
+// console.log(`${count}`); // 0
 
-setTimeout(() => {
-  count++;
-  console.log(`in settimeout - ${count}`); // 1
-}, 1000);
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 100);
+// }
 
-console.log(`${count}`); // 0
+// // 3 3 3  // solve by using let beacuse var is in js like global scope
 
-for (var i = 0; i < 3; i++) {
-  setTimeout(() => {
-    console.log(i);
-  }, 100);
+// var a = 100;
+
+// function abc(x) {
+//   var a = 10;
+
+//   return function (y) {
+//     return a + y;
+//   };
+// }
+
+// a = 50;
+
+// var inner = abc(20);
+
+// function foo() {
+//   var a = 30;
+//   console.log(inner(5));
+// }
+// foo();
+
+// function createIncrement() {
+//   let count = 0;
+//   function increment() {
+//     count++;
+//   }
+//   let message = `count is ${count}`;
+
+//   function log() {
+//     console.log(message);
+//   }
+
+//   return [increment, log];
+// }
+
+// const [increment,log] = createIncrement();
+// increment();
+// increment();
+// increment();
+// log()
+
+
+// memoization  is used for optimization
+//  to speed up computer program by storing the results of expensive function
+// calls and returned the catch result when the same inputs occurs again
+
+
+function fib(n){
+    if(n<2) {
+        return n;
+
+    }
+    return fib(n-1) +fib(n-2)
 }
 
-// 3 3 3  // solve by using let beacuse var is in js like global scope
+// console.time();
+// console.log(fib(3));
+// console.log(fib(3)); // why not giev same reuslt
+// console.log(fib(3));
+// console.timeEnd()
 
-var a = 100;
 
-function abc(x) {
-  var a = 10;
+// memozie function we can use also from loadas =h library 
 
-  return function (y) {
-    return a + y;
-  };
+
+
+function memozietionFunction(fn) {
+  
+    const cach= new Map();  //{}
+   
+     return function (...args) {
+        const key = args.toString();
+
+        if(cach.has(key)) {
+            return cach.get(key);
+        }
+        cach.set(key, fn(...args)) ;
+        return cach.get(key);
+     }
+
 }
 
-a = 50;
+console.time();
+ 
+memozietionFunction(fib(30));
+ 
 
-var inner = abc(20);
+console.timeEnd()
 
-function foo() {
-  var a = 30;
-  console.log(inner(5));
-}
-foo();
-
-function createIncrement() {
-  let count = 0;
-  function increment() {
-    count++;
-  }
-  let message = `count is ${count}`;
-
-  function log() {
-    console.log(message);
-  }
-
-  return [increment, log];
-}
-
-const [increment,log] = createIncrement();
-increment();
-increment();
-increment();
-log()
