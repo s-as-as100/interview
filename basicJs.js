@@ -5,7 +5,7 @@
 
 // function sum(a,b) {
 //   return ;
-//   a+b;
+//    a+b;
 // }
 
 // function sum(a,b) {
@@ -147,3 +147,5 @@ console.log(1==true);
 console.log(0==false)
 console.log(''==false);
 console.log('1'==true);
+console.log(true+false)
+console.log(9+true)
