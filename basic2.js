@@ -135,3 +135,17 @@ memozietionFunction(fib(30));
 
 console.timeEnd()
 
+
+console.log(typeof [])
+
+
+var foo = { n: 1 };
+var bar = foo;
+foo.x = foo = { n: 2 };
+console.log(foo,bar)
+
+console.log(foo.x);
+console.log(bar.x);
+
+console.log(typeof function() {});
+console.log(typeof class {});
