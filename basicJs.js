@@ -187,89 +187,106 @@
 // foo.push(2);
 // console.log(foo.length);
 
-var a = {};
-var b = a;
-// console.log(a,b)
+// var a = {};
+// var b = a;
+// // console.log(a,b)
 
-const num = [1, 2, 3, 5, 5, 6];
+// const num = [1, 2, 3, 5, 5, 6];
 
-let subset = [];
-for (let i = 0; i < num.length; i++) {
-  for (let j = i; j < num.length; j++) {
-    if (num[i] < num[i + 1] === 10) {
-      subset.push(num[j], num[j + 1]);
-    }
+// let subset = [];
+// for (let i = 0; i < num.length; i++) {
+//   for (let j = i; j < num.length; j++) {
+//     if (num[i] < num[i + 1] === 10) {
+//       subset.push(num[j], num[j + 1]);
+//     }
+//   }
+// }
+
+// console.log(subset, "sub");
+
+// // import GameShuffleCard from "@/commonComponents/GameShuffleCard/GameShuffleCard";
+// ("use client");
+// import React, { useCallback, useState } from "react";
+
+// const noOfCards = [
+//   {
+//     id: 1,
+//     frontName: "Front",
+//     backName: "Back",
+//   },
+//   {
+//     id: 2,
+
+//     frontName: "Front",
+//     backName: "Back",
+//   },
+//   {
+//     id: 3,
+
+//     frontName: "Front",
+//     backName: "Back",
+//   },
+//   {
+//     id: 4,
+
+//     frontName: "Front",
+//     backName: "Back",
+//   },
+// ];
+
+// const CardAnimation = () => {
+//   const [selectedCard, setSelectedCard] = useState();
+
+//   return (
+//     <div
+//       className="gameContainer"
+//       style={{
+//         display: "flex",
+//         gap: "1rem",
+//       }}
+//     >
+//       {noOfCards.map((item, index) => {
+//         const handleAnimationCard = useCallback(() => {
+//           setSelectedCard(item.id);
+//         }, [item.id]);
+//         return (
+//           <div key={index}>
+//             <div
+//               style={{
+//                 height: "100px",
+//                 width: "100px",
+//                 background: selectedCard === item.id ? "orange" : "red",
+//               }}
+//               className="gameCardContainer"
+//               onClick={handleAnimationCard}
+//             >
+//               <p>{item.frontName}</p>
+//             </div>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// };
+
+// export default CardAnimation;
+
+
+// recursion : When function call itself
+// otherwise it will get called for infinite time
+// if a fucntion call itself then there must be an end point .
+
+
+let counter =1;
+function demo(n) {
+
+  if(counter>n){
+    return;
   }
+  console.log("like video", counter);
+  counter++;
+
+  demo(n) // maximum call stack size exceed
 }
 
-console.log(subset, "sub");
-
-// import GameShuffleCard from "@/commonComponents/GameShuffleCard/GameShuffleCard";
-"use client";
-import React, { useCallback, useState } from "react";
-
-const noOfCards = [
-  {
-    id: 1,
-    frontName: "Front",
-    backName: "Back",
-  },
-  {
-    id: 2,
-
-    frontName: "Front",
-    backName: "Back",
-  },
-  {
-    id: 3,
-
-    frontName: "Front",
-    backName: "Back",
-  },
-  {
-    id: 4,
-
-    frontName: "Front",
-    backName: "Back",
-  },
-];
-
-const CardAnimation = () => {
-  const [selectedCard, setSelectedCard] = useState();
-
-const handleAnimationCard = useCallback((id) => {
-    setSelectedCard(id);
-  }, []);
-
-
-
-  return (
-    <div
-      className="gameContainer"
-      style={{
-        display: "flex",
-        gap: "1rem",
-      }}
-    >
-      {noOfCards.map((item, index) => {
-        return (
-          <div key={index}>
-            <div
-              style={{
-                height: "100px",
-                width: "100px",
-                background: selectedCard === item.id ? "orange" : "red",
-              }}
-              className="gameCardContainer"
-              onClick={() => handleAnimationCard(item.id)}
-            >
-              <p>{ item.frontName}</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
-
-export default CardAnimation;
+demo(10)
