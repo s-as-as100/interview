@@ -285,6 +285,7 @@ function demo(n) {
   }
   console.log("like video", counter);
   counter++;
+  // console.log(n,"nnnnnnnnnnn")
 
   demo(n) // maximum call stack size exceed
 }
