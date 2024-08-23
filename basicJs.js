@@ -271,23 +271,139 @@
 
 // export default CardAnimation;
 
-
 // recursion : When function call itself
 // otherwise it will get called for infinite time
 // if a fucntion call itself then there must be an end point .
 
+// let counter =1;
+// function demo(n) {
 
-let counter =1;
-function demo(n) {
+//   if(counter>n){
+//     return;
+//   }
+//   console.log("like video", counter);
+//   counter++;
+//   // console.log(n,"nnnnnnnnnnn")
 
-  if(counter>n){
-    return;
-  }
-  console.log("like video", counter);
-  counter++;
-  // console.log(n,"nnnnnnnnnnn")
+//   demo(n) // maximum call stack size exceed
+// }
 
-  demo(n) // maximum call stack size exceed
+// demo(10)
+
+// for (var i = 0; i < 5; i++) {
+//   setTimeout(() => {
+//     console.log(i, "inside");
+//   }, 1000);
+
+//   setTimeout(() => {
+//     console.log(i, "inner");
+//   }, 0);
+// }
+
+// let a = 20;
+
+// function text() {
+//   let  a=10
+//   console.log(a,"inside")
+// }
+// a="h3ll0o"
+// console.log(a,"aa")
+// text()
+
+// // this is because js is dynamically typed language.
+// // its means all type checks are done at run time ( when program executing)
+
+// console.log(typeof Date)
+
+console.log(a); // a connect be access before initialize temproal dead zone
+var a = 10;
+
+// what temporal dead zone  ?
+
+// it is specific time period in the execution pf js code where the varaibale declared with let and const exists but connot
+// accessed until the value is assigned
+
+// spread Expands the element used in array or objects and functiona rgym,enrts
+
+// rest collects element into an array or object
+function exampe(...values) {
+  console.log(values);
 }
 
-demo(10)
+exampe(1, 2, 3, 4);
+
+const array1 = [1, 3, 4, 5, 6];
+const array2 = [3, 6, 7, 8, 9];
+const combinedArray = array1.concat(array2);
+// const removeDublicateValue  = [...new Set(combinedArray)];
+// console.log(combinedArray,"combined array",removeDublicateValue);
+
+// const unique = combinedArray.filter((item,index) =>{
+//   console.log(combinedArray.indexOf(item)===index)
+//   return combinedArray.indexOf(item)===index
+//   // console.log(index)
+//  })
+
+//  console.log(unique)
+
+// const unique = [];
+// combinedArray.forEach((item) => {
+//   if (!unique.includes(item)) {
+//     unique.push(item);
+//   }
+// });
+
+// pass by value;
+
+let num = 10;
+function chnageNum(num) {
+  num = 20;
+  console.log(num); // 20 not 
+}
+
+console.log(chnageNum(num),"hhhhhhhhh")
+
+// pass by reference -->
+
+let arr = [1,2,3]
+
+function addToArr(arr) {
+  arr.push(4);
+  console.log(arr)
+}
+
+addToArr(arr)
+
+// console.log(typeof ,"typeof undefined")
+
+function outer() {
+  var a= 10;
+
+  function inner() {
+    console.log(a,"aaaaaa")
+  }
+
+  return inner;
+}
+
+var close =outer()
+console.log(close(),"define")
+
+
+
+// A callback is a function is passed as an argument to another function which can be executed later in the code
+
+
+// function hello1(){
+//   console.log("object")
+// }
+
+// function hello2() {
+//   console.log("2")
+//   hello1()
+// }
+
+// hello2(hello1)
+
+// some is used if any element satisfied the condition retrun true 
+//every( // checlk all lememntn satastidfied the conditon)
