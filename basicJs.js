@@ -407,3 +407,20 @@ console.log(close(),"define")
 
 // some is used if any element satisfied the condition retrun true 
 //every( // checlk all lememntn satastidfied the conditon)
+
+// Currying in JavaScript is a technique where a function doesn't take all its arguments at once.
+//  Instead, it takes the first argument and returns a new function that takes the next argument, and so on,
+//  until all arguments have been provided.
+//  Once all arguments are supplied, the function executes with all the arguments.
+
+
+function curring(a){
+  return function(b) {
+
+    return function(c) {
+      return a+b+c
+    }
+  }
+}
+
+console.log(curring(2)(3)(2),"curring")
