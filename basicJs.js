@@ -359,6 +359,7 @@ let num = 10;
 function chnageNum(num) {
   num = 20;
   console.log(num); // 20 not 
+  return
 }
 
 console.log(chnageNum(num),"hhhhhhhhh")
@@ -416,11 +417,21 @@ console.log(close(),"define")
 
 function curring(a){
   return function(b) {
-
     return function(c) {
       return a+b+c
     }
   }
 }
 
-console.log(curring(2)(3)(2),"curring")
+console.log(curring(2)(3)(2),"curring");
+
+// this is called dynamic typed language
+let q="hello"
+q=2;
+console.log(q,"qqqqqqqq")
+  const uniqueArr = [];
+  arr.forEach((item) => {
+    if (!uniqueArr.some((i) => i.a === item.a && i.b === item.b)) {
+      uniqueArr.push(item);
+    }
+  });
