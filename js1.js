@@ -524,4 +524,7 @@ console.log(typeof undefined); // undefined --> type undefined
 
 // dog.breed= 'labrador';
 
-// console.log(dog)
+// console.log(dog);
+
+
+// call and apply method
