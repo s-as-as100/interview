@@ -315,8 +315,8 @@
 
 // console.log(typeof Date)
 
-console.log(a); // a connect be access before initialize temproal dead zone
-var a = 10;
+// console.log(a); // a connect be access before initialize temproal dead zone
+// var a = 10;
 
 // what temporal dead zone  ?
 
@@ -326,15 +326,15 @@ var a = 10;
 // spread Expands the element used in array or objects and functiona rgym,enrts
 
 // rest collects element into an array or object
-function exampe(...values) {
-  console.log(values);
-}
+// function exampe(...values) {
+//   console.log(values);
+// }
 
-exampe(1, 2, 3, 4);
+// exampe(1, 2, 3, 4);
 
-const array1 = [1, 3, 4, 5, 6];
-const array2 = [3, 6, 7, 8, 9];
-const combinedArray = array1.concat(array2);
+// const array1 = [1, 3, 4, 5, 6];
+// const array2 = [3, 6, 7, 8, 9];
+// const combinedArray = array1.concat(array2);
 // const removeDublicateValue  = [...new Set(combinedArray)];
 // console.log(combinedArray,"combined array",removeDublicateValue);
 
@@ -355,45 +355,42 @@ const combinedArray = array1.concat(array2);
 
 // pass by value;
 
-let num = 10;
-function chnageNum(num) {
-  num = 20;
-  console.log(num); // 20 not 
-  return
-}
+// let num = 10;
+// function chnageNum(num) {
+//   num = 20;
+//   console.log(num); // 20 not
+//   return
+// }
 
-console.log(chnageNum(num),"hhhhhhhhh")
+// console.log(chnageNum(num),"hhhhhhhhh")
 
 // pass by reference -->
 
-let arr = [1,2,3]
+// let arr = [1,2,3]
 
-function addToArr(arr) {
-  arr.push(4);
-  console.log(arr)
-}
+// function addToArr(arr) {
+//   arr.push(4);
+//   console.log(arr)
+// }
 
-addToArr(arr)
+// addToArr(arr)
 
 // console.log(typeof ,"typeof undefined")
 
-function outer() {
-  var a= 10;
+// function outer() {
+//   var a= 10;
 
-  function inner() {
-    console.log(a,"aaaaaa")
-  }
+//   function inner() {
+//     console.log(a,"aaaaaa")
+//   }
 
-  return inner;
-}
+//   return inner;
+// }
 
-var close =outer()
-console.log(close(),"define")
-
-
+// var close =outer()
+// console.log(close(),"define")
 
 // A callback is a function is passed as an argument to another function which can be executed later in the code
-
 
 // function hello1(){
 //   console.log("object")
@@ -406,7 +403,7 @@ console.log(close(),"define")
 
 // hello2(hello1)
 
-// some is used if any element satisfied the condition retrun true 
+// some is used if any element satisfied the condition retrun true
 //every( // checlk all lememntn satastidfied the conditon)
 
 // Currying in JavaScript is a technique where a function doesn't take all its arguments at once.
@@ -414,24 +411,49 @@ console.log(close(),"define")
 //  until all arguments have been provided.
 //  Once all arguments are supplied, the function executes with all the arguments.
 
+// function curring(a){
+//   return function(b) {
+//     return function(c) {
+//       return a+b+c
+//     }
+//   }
+// }
 
-function curring(a){
-  return function(b) {
-    return function(c) {
-      return a+b+c
-    }
+// console.log(curring(2)(3)(2),"curring");
+
+// // this is called dynamic typed language
+// let q="hello"
+// q=2;
+// console.log(q,"qqqqqqqq")
+//   const uniqueArr = [];
+//   arr.forEach((item) => {
+//     if (!uniqueArr.some((i) => i.a === item.a && i.b === item.b)) {
+//       uniqueArr.push(item);
+//     }
+//   });
+
+let array = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
+
+// let a= 10;
+// let b = new Number(10);
+// let c= b;
+// console.log(a===c)
+let uniqueArray = [];
+
+// const result  = array.filter((item) =>{
+//   if(!uniqueArray.includes(item) ){
+//     uniqueArray.push(item);
+//     return true
+//   }
+//   return false
+// });
+
+const result = array.filter((item) => {
+  if (uniqueArray.indexOf(item) === -1) {
+    uniqueArray.push(item);
+    return true;
   }
-}
+  return false;
+});
 
-console.log(curring(2)(3)(2),"curring");
-
-// this is called dynamic typed language
-let q="hello"
-q=2;
-console.log(q,"qqqqqqqq")
-  const uniqueArr = [];
-  arr.forEach((item) => {
-    if (!uniqueArr.some((i) => i.a === item.a && i.b === item.b)) {
-      uniqueArr.push(item);
-    }
-  });
+console.log(result, "ressss");

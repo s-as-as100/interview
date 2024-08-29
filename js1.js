@@ -528,3 +528,8 @@ console.log(typeof undefined); // undefined --> type undefined
 
 
 // call and apply method
+
+
+// 1. Write a program to remove duplicates from an 
+// array ?
+
