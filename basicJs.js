@@ -458,9 +458,21 @@
 
 // console.log(result, "ressss");
 
-function removeDublicateValue(arr) {
-  // return Array.from(new Set(arr));
-  return [...new Set(arr)]
+// function removeDublicateValue(arr) {
+//   // return Array.from(new Set(arr));
+//   return [...new Set(arr)]
+// }
+
+// console.log(removeDublicateValue([1, 2, 3, 2, 1, 2, 6, 8]));
+
+function findEvenNumber(array) {
+  let even = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      even.push(array[i]);
+    }
+  }
+  return even;
 }
 
-console.log(removeDublicateValue([1, 2, 3, 2, 1, 2, 6, 8]));
+console.log(findEvenNumber([1, 2, 3, 4, 5, 6]))
