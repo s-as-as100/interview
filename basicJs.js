@@ -432,13 +432,13 @@
 //     }
 //   });
 
-let array = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
+// let array = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
 
 // let a= 10;
 // let b = new Number(10);
 // let c= b;
 // console.log(a===c)
-let uniqueArray = [];
+// let uniqueArray = [];
 
 // const result  = array.filter((item) =>{
 //   if(!uniqueArray.includes(item) ){
@@ -448,12 +448,19 @@ let uniqueArray = [];
 //   return false
 // });
 
-const result = array.filter((item) => {
-  if (uniqueArray.indexOf(item) === -1) {
-    uniqueArray.push(item);
-    return true;
-  }
-  return false;
-});
+// const result = array.filter((item) => {
+//   if (uniqueArray.indexOf(item) === -1) {
+//     uniqueArray.push(item);
+//     return true;
+//   }
+//   return false;
+// });
 
-console.log(result, "ressss");
+// console.log(result, "ressss");
+
+function removeDublicateValue(arr) {
+  // return Array.from(new Set(arr));
+  return [...new Set(arr)]
+}
+
+console.log(removeDublicateValue([1, 2, 3, 2, 1, 2, 6, 8]));
