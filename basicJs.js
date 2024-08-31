@@ -465,14 +465,27 @@
 
 // console.log(removeDublicateValue([1, 2, 3, 2, 1, 2, 6, 8]));
 
-function findEvenNumber(array) {
-  let even = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 0) {
-      even.push(array[i]);
-    }
+// function findEvenNumber(array) {
+//   let even = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 === 0) {
+//       even.push(array[i]);
+//     }
+//   }
+//   return even;
+// }
+
+// console.log(findEvenNumber([1, 2, 3, 4, 5, 6]))
+
+function isPalindrome(str) {
+  const normalString = str.toLowerCase();
+  // const reverse = normalString.split('').reverse().join('');
+  // return normalString === reverse
+  const lengthOfstring = str.length;
+  for (let i = 0; i < lengthOfstring / 2; i++) {
+    if (normalString[i] !== normalString[lengthOfstring - 1 - i]) return false;
   }
-  return even;
+  return true;
 }
 
-console.log(findEvenNumber([1, 2, 3, 4, 5, 6]))
+console.log(isPalindrome("mam"));
