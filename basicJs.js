@@ -488,4 +488,4 @@ function isPalindrome(str) {
   return true;
 }
 
-console.log(isPalindrome("mam"));
+// console.log(isPalindrome("mam"));
