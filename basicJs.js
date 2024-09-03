@@ -492,14 +492,30 @@
 
 //  4. Find the factorial of given number ?
 
-
 function findFactorail(n) {
-   if(n<1){
+  if (n < 1) {
     return 1;
-   }
-    else{
-      return n * findFactorail(n-1);
-    }  
+  } else {
+    return n * findFactorail(n - 1);
+  }
 }
 
-console.log(findFactorail(5))
+console.log(findFactorail(5));
+
+// 5. Program to find longest word in a given sentence
+
+//  input = "i love you"
+// ouyput = "love";
+
+function longestWord(str) {
+  const wordsArray = str.split(" ");
+  let longestWord = "";
+  for (let i = 0; i < wordsArray.length; i++) {
+    if (wordsArray[i].length > longestWord.length) {
+      longestWord = wordsArray[i];
+    }
+  }
+  console.log(longestWord);
+}
+
+ longestWord("i love you") 
