@@ -477,15 +477,29 @@
 
 // console.log(findEvenNumber([1, 2, 3, 4, 5, 6]))
 
-function isPalindrome(str) {
-  const normalString = str.toLowerCase();
-  // const reverse = normalString.split('').reverse().join('');
-  // return normalString === reverse
-  const lengthOfstring = str.length;
-  for (let i = 0; i < lengthOfstring / 2; i++) {
-    if (normalString[i] !== normalString[lengthOfstring - 1 - i]) return false;
-  }
-  return true;
-}
+// function isPalindrome(str) {
+//   const normalString = str.toLowerCase();
+//   // const reverse = normalString.split('').reverse().join('');
+//   // return normalString === reverse
+//   const lengthOfstring = str.length;
+//   for (let i = 0; i < lengthOfstring / 2; i++) {
+//     if (normalString[i] !== normalString[lengthOfstring - 1 - i]) return false;
+//   }
+//   return true;
+// }
 
 // console.log(isPalindrome("mam"));
+
+//  4. Find the factorial of given number ?
+
+
+function findFactorail(n) {
+   if(n<1){
+    return 1;
+   }
+    else{
+      return n * findFactorail(n-1);
+    }  
+}
+
+console.log(findFactorail(5))
