@@ -492,30 +492,46 @@
 
 //  4. Find the factorial of given number ?
 
-function findFactorail(n) {
-  if (n < 1) {
-    return 1;
-  } else {
-    return n * findFactorail(n - 1);
-  }
-}
+// function findFactorail(n) {
+//   if (n < 1) {
+//     return 1;
+//   } else {
+//     return n * findFactorail(n - 1);
+//   }
+// }
 
-console.log(findFactorail(5));
+// console.log(findFactorail(5));
 
 // 5. Program to find longest word in a given sentence
 
 //  input = "i love you"
 // ouyput = "love";
 
-function longestWord(str) {
-  const wordsArray = str.split(" ");
-  let longestWord = "";
-  for (let i = 0; i < wordsArray.length; i++) {
-    if (wordsArray[i].length > longestWord.length) {
-      longestWord = wordsArray[i];
+// function longestWord(str) {
+//   const wordsArray = str.split(" ");
+//   let longestWord = "";
+//   for (let i = 0; i < wordsArray.length; i++) {
+//     if (wordsArray[i].length > longestWord.length) {
+//       longestWord = wordsArray[i];
+//     }
+//   }
+//   console.log(longestWord);
+// }
+
+//  longestWord("i love you")
+
+// Write a JavaScript program to find the maximum number in an array.
+
+function findMaxValueInArray(arr) {
+  let maxValue = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxValue) {
+      maxValue = arr[i];
     }
   }
-  console.log(longestWord);
+  return maxValue;
 }
+let array = [1, 2, 44, 5, 11111, -78, 40, 11, 101, 3];
 
- longestWord("i love you") 
+console.log(findMaxValueInArray(array), "ehh");
