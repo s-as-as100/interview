@@ -522,16 +522,61 @@
 
 // Write a JavaScript program to find the maximum number in an array.
 
-function findMaxValueInArray(arr) {
-  let maxValue = arr[0];
+// function findMaxValueInArray(arr) {
+//   let maxValue = arr[0];
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > maxValue) {
-      maxValue = arr[i];
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > maxValue) {
+//       maxValue = arr[i];
+//     }
+//   }
+//   return maxValue;
+// }
+// let array = [1, 2, 44, 5, 11111, -78, 40, 11, 101, 3];
+
+// console.log(findMaxValueInArray(array), "ehh");
+
+//  7. Write a JavaScript function to check if a given number is prime.
+
+// function checkNumberIsPrime(num) {
+//   if (num < 2) {
+//     return false;
+//   }
+
+//   for (let i = 3; i < Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(checkNumberIsPrime(12));
+
+// . Program to find Reverse of a string without using built-in method ?
+
+// function reverseString(str) {
+//   let reverseStr = "";
+
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reverseStr += str[i];
+//   }
+//   console.log(reverseStr);
+// }
+
+// reverseString("i love oyu");
+
+//  9. Find the smallest word in a given sentence ?
+
+function smallestWordInSentence() {
+  let secentance = "java is beautiful language";
+  const words = secentance.split(" ");
+  let smallestWord = words[0];
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length < smallestWord.length) {
+      smallestWord = words[i];
     }
   }
-  return maxValue;
+  console.log(smallestWord);
 }
-let array = [1, 2, 44, 5, 11111, -78, 40, 11, 101, 3];
-
-console.log(findMaxValueInArray(array), "ehh");
+smallestWordInSentence();
