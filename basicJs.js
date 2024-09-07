@@ -568,15 +568,30 @@
 
 //  9. Find the smallest word in a given sentence ?
 
-function smallestWordInSentence() {
-  let secentance = "java is beautiful language";
-  const words = secentance.split(" ");
-  let smallestWord = words[0];
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length < smallestWord.length) {
-      smallestWord = words[i];
-    }
-  }
-  console.log(smallestWord);
-}
-smallestWordInSentence();
+// function smallestWordInSentence() {
+//   let secentance = "java is beautiful language";
+//   const words = secentance.split(" ");
+//   let smallestWord = words[0];
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i].length < smallestWord.length) {
+//       smallestWord = words[i];
+//     }
+//   }
+//   console.log(smallestWord);
+// }
+// smallestWordInSentence();
+
+//  16. Write logic to get unique objects from below array ?
+
+const array = [
+  { name: "mohd" },
+  { name: "value" },
+  { name: "mohd" },
+  { name: "mohd" },
+  { name: 11111 },
+];
+
+// output - {name:"mohd"},{name:"value"},{name:11111}
+
+const result = array.filter((item,index,self) =>index===(self.findIndex((t)=>t.name===item.name)))
+  
