@@ -595,24 +595,26 @@
 
 // const result = array.filter((item,index,self) =>index===(self.findIndex((t)=>t.name===item.name)))
 
-function findLargetPair(array, b) {
-  const sortedArray = array.sort((a, b) => b - a);
-  return sortedArray.slice(0, b);
-}
+// function findLargetPair(array, b) {
+//   const sortedArray = array.sort((a, b) => b - a);
+//   return sortedArray.slice(0, b);
+// }
 
 //  console.log(findLargetPair([3, 2, 1, 5, 6, 4], 3))
 
 // find the missing no in the consecutive array
 
+// let arrayOf = [1, 2, 3, 4, 6, 7, 8,10];
+
+// function missingNumber(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     let j = i + 1;
+//     if (arr[j] - arr[i] !== 1) {
+//        return arr[i] + 1;
+//     }
+//   }
+// }
+
+// console.log(missingNumber(arrayOf));
+
 let arrayOf = [1, 2, 3, 4, 6, 7, 8,10];
-
-function missingNumber(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    let j = i + 1;
-    if (arr[j] - arr[i] !== 1) {
-       return arr[i] + 1;
-    }
-  }
-}
-
-console.log(missingNumber(arrayOf));
