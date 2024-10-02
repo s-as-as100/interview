@@ -533,3 +533,15 @@ console.log(typeof undefined); // undefined --> type undefined
 // 1. Write a program to remove duplicates from an 
 // array ?
 
+
+import React from 'react'
+
+const FormHandle = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default FormHandle
