@@ -534,14 +534,24 @@ console.log(typeof undefined); // undefined --> type undefined
 // array ?
 
 
-import React from 'react'
+// import React from 'react'
+// import {From} from 'antd';
+// const FormHandle = () => {
+    
 
-const FormHandle = () => {
-  return (
-    <div>
+
+// const onSubmit =()=>{}
+
+//   return (
+//     <div>
+//         <Form onSubmit={onSubmit}>
+//             <Input name="e" placeholder="email"/>
+//             <Input placeholder="passwor"/>
+
+//         </Form>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default FormHandle
+// export default FormHandle
