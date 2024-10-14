@@ -19,13 +19,30 @@
 // }
 // console.log(obj);
 
-function showMessage(marks) {
-  //  const msg = marks || 'Absent'; //bug   solve
-  const msg = marks ?? "Absent"; //bug   solve
+// function showMessage(marks) {
+//   //  const msg = marks || 'Absent'; //bug   solve
+//   const msg = marks ?? "Absent"; //bug   solve
 
-  console.log(`Marks ${msg}`);
+//   console.log(`Marks ${msg}`);
+// }
+
+// showMessage(12);
+// showMessage(0);
+// showMessage(435);
+
+
+
+const str = "i love my country";
+
+const vowels = ['a','e','i','o','u'];
+
+
+function countVowels(str) {
+    let count =0;
+    str.toLowerCase().split("").forEach(ch => {
+        vowels.includes(ch) && count++
+    });
+  return count;
 }
 
-showMessage(12);
-showMessage(0);
-showMessage(435);
+console.log(countVowels(str))
