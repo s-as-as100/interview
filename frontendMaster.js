@@ -32,17 +32,27 @@
 
 
 
-const str = "i love my country";
+// const str = "i love my country";
+// const vowels = ['a','e','i','o','u'];
 
-const vowels = ['a','e','i','o','u'];
+
+// function countVowels(str) {
+//     let count =0;
+//     str.toLowerCase().split("").forEach(ch => {
+//         vowels.includes(ch) && count++
+//     });
+//   return count;
+// }
+
+// console.log(countVowels(str))
 
 
-function countVowels(str) {
-    let count =0;
-    str.toLowerCase().split("").forEach(ch => {
-        vowels.includes(ch) && count++
-    });
-  return count;
+
+function sum(n1,n2) {
+  "use strict"
+  n1=200;
+  n2=200;
+  return arguments[0] + arguments[1]
 }
 
-console.log(countVowels(str))
+console.log(sum(1,2))
