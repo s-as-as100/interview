@@ -30,11 +30,8 @@
 // showMessage(0);
 // showMessage(435);
 
-
-
 // const str = "i love my country";
 // const vowels = ['a','e','i','o','u'];
-
 
 // function countVowels(str) {
 //     let count =0;
@@ -46,13 +43,42 @@
 
 // console.log(countVowels(str))
 
+// function sum(n1,n2) {
+//   "use strict"
+//   n1=200;
+//   n2=200;
+//   return arguments[0] + arguments[1]
+// }
+
+// console.log(sum(1,2))
+
+// function show() {
+//   // solve this problemt without using let keyword
+//   // using iife
+//   // {
+//   //   var x = 23;
+//   //   var y = 44;
+//   // }
+//   (function () {
+//     {
+//       var x = 23;
+//       var y = 44;
+//     }
+//   })();
+
+//   console.log(x, y);
+// }
+
+// show();
 
 
-function sum(n1,n2) {
-  "use strict"
-  n1=200;
-  n2=200;
-  return arguments[0] + arguments[1]
+function checkParameter(){
+  throw new Error("Parameter is required")
+ }
+
+
+function parameterDefault(name=checkParameter()) {
+console.log(name,"nnnn")
 }
 
-console.log(sum(1,2))
+parameterDefault("helllo")
