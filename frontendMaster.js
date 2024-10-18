@@ -72,13 +72,54 @@
 // show();
 
 
-function checkParameter(){
-  throw new Error("Parameter is required")
- }
+// function checkParameter(){
+//   throw new Error("Parameter is required")
+//  }
 
 
-function parameterDefault(name=checkParameter()) {
-console.log(name,"nnnn")
+// function parameterDefault(name=checkParameter()) {
+// console.log(name,"nnnn")
+// }
+
+// parameterDefault("helllo")
+
+
+// total no of scope : 5 { {block scope} {function scope} {global scope} {script scope} {module scope}}
+// max  00 add automactically 
+
+// console.log(88888888888888888888)
+
+
+// add value 
+
+cool()
+
+// function declaration is fully hoisted
+function cool() {
+  console.log('object')
 }
 
-parameterDefault("helllo")
+// this is because js compiler moves all the declarations of variables and functions on top.
+// so there is not be any error . this is called hoisting 
+
+
+// arrow function is not hoisted.
+// x()
+// const x = ()=>{
+//     console.log('object')
+// }
+
+
+// let and const - Hoisted but not initialized. (Temporal dead zone)
+
+//  it is specific time period in the execution of js code where tthe variables 
+// declared with let ann const exuists but 
+
+
+function exampleConst() {
+    // console.log(b); // ReferenceError: Cannot access 'b' before initialization
+    const b = 10;   // b is in the TDZ until this line is executed
+    console.log(b); // 10
+}
+
+exampleConst();

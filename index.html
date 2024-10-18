@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #app div:nth-child(even) {
+        background-color: rebeccapurple;
+      }
+      #app div:nth-child(odd) {
+        background-color: red;
+      }
+    </style>
+  </head>
 
-</head>
-<body>
+  <body>
     <div>
-        <span>hello</span>
-   </div>
-   <p>This is a <span>span element</span> inside a paragraph.</p>
-   <p>This is another <a href="#">link</a> inside a paragraph.</p>
-   <button id="btn">Resolve</button>
-   <button id="btn2">Reject</button>
+      <span>hello</span>
+    </div>
 
-   <script src="js1.js"></script>
+    <p>This is a <span>span element</span> inside a paragraph.</p>
+    <p>This is another <a href="#">link</a> inside a paragraph.</p>
+    <button id="btn">Resolve</button>
+    <button id="btn2">Reject</button>
+    <div id="app">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
 
-</body>
+    <script src="js1.js"></script>
+  </body>
 </html>
