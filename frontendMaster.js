@@ -123,3 +123,65 @@ function exampleConst() {
 }
 
 exampleConst();
+
+
+var z =10; 
+function demo(){
+    console.log(z,"eee")
+}
+
+demo()
+
+// console.log(u);
+// // console.log(d)
+// console.log(i)
+// var u;
+// let d=10
+// const i=8
+
+// rest operaot is  used to condense multiple elements into single array of object
+
+// function Example(...args){
+// console.log(args)
+// }
+// Example(1,2,3,4)
+
+
+// What are the differences between call(), apply() and bind() ? 
+
+// call methods is invoked the function immediately with the given value 
+// and allow to pass the arguments  one by one with comma separot
+
+
+let name1 ={
+    firstName:"mohd",
+    lastName:"arif"
+}
+
+const printName = function(paramValue) {
+    console.log(this.firstName,this.lastName ,paramValue)
+}
+
+printName.call(name1,"call hello")
+
+
+// apply methods is invoked the function the immediately with the given
+// value and alow us to pass the argument as an array
+printName.apply(name1,["call hello"])
+
+
+// Bind method will return a new function with the given value and arguments which can be invoked later .
+
+
+let nameBind = {
+    firstPersonName:"md",
+    secondPersonName:"arif"
+}
+
+const bindExample = function(params) {
+    console.log(this.firstPersonName,this.secondPersonName,params)
+}
+
+const laterCall = bindExample.bind(nameBind,"I love bind method");
+
+laterCall()
