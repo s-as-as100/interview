@@ -311,17 +311,81 @@ const arrayNew = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
 
 // . Program to find Reverse of a string without using built-in method ?
 
-function reverseString(str) {
-//    let reverse ="";
+// function reverseString(str) {
+// //    let reverse ="";
 
-//    for (let i = str.length-1; i >=0; i--) {
-//         reverse+= str[i]
-//    }
-//    return reverse
+// //    for (let i = str.length-1; i >=0; i--) {
+// //         reverse+= str[i]
+// //    }
+// //    return reverse
 
-  const reverse =  str.split("").reverse().join("");
-  return reverse
+//   const reverse =  str.split("").reverse().join("");
+//   return reverse
 
+// }
+
+// console.log(reverseString("hello"))
+
+
+// function guessArray() {
+//  let a = [1, 2];
+//  let b = [1, 2];
+//  console.log(a == b);
+//  console.log(a === b);
+// }
+// guessArray();
+
+// let a = 3;
+// let b = new Number(3);
+// console.log(b,"bbbbbbbbbb")
+// let c = 3;
+// console.log(a == b);
+// console.log(a === b);
+// console.log(b === c);
+
+
+// function job(){
+//  return new Promise((resolve,reject)=>{
+//  reject()
+//  })
+// }
+// let promise = job();
+// promise.then(()=>{
+//  console.log("1111111111")
+// }).then(()=>{
+//  console.log("22222222222")
+// }).catch(()=>{
+//  console.log("3333333333")
+// }).then(()=>{
+//  console.log("4444444444")
+// })
+
+
+// let cd=0;
+// let id = setInterval(() => {
+// console.log(cd++)
+// },10)
+// setTimeout(() => {
+// clearInterval(id)
+// },2000)
+
+const array = [1, 2, 3, [4, 5], [6, 7, [8, [9], 10]]];
+
+function flatAnArray(array) {
+    
+  let result =[];
+
+   array.forEach(element => {
+     if(Array.isArray(element)) {
+        result = result.concat(flatAnArray(element))
+     }
+     else {
+        result.push(element)
+     }
+   });
+
+   return result;
 }
 
-console.log(reverseString("hello"))
+
+console.log(flatAnArray(array))
