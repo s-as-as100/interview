@@ -1,4 +1,4 @@
-const str = "helloworld";
+// const str = "helloworld";
 
 // const obj = {};
 // for (const x of str) {
@@ -217,7 +217,7 @@ const str = "helloworld";
 
 // removeDuplicatesWay1([1, 2, 1, 3, 4, 2, 2, 1, 5, 6]);
 
-const arrayNew = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
+// const arrayNew = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
 //  return Array.from(new Set(arr));
 
 // const arrayNew = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
@@ -369,23 +369,127 @@ const arrayNew = [1, 2, 1, 3, 4, 2, 2, 1, 5, 6];
 // clearInterval(id)
 // },2000)
 
-const array = [1, 2, 3, [4, 5], [6, 7, [8, [9], 10]]];
+// const array = [1, 2, 3, [4, 5], [6, 7, [8, [9], 10]]];
 
-function flatAnArray(array) {
-    
-  let result =[];
+// function flatAnArray(array) {
 
-   array.forEach(element => {
-     if(Array.isArray(element)) {
-        result = result.concat(flatAnArray(element))
-     }
-     else {
-        result.push(element)
-     }
-   });
+//   let result =[];
 
-   return result;
+//    array.forEach(element => {
+//      if(Array.isArray(element)) {
+//         result = result.concat(flatAnArray(element))
+//      }
+//      else {
+//         result.push(element)
+//      }
+//    });
+
+//    return result;
+// }
+
+
+// console.log(flatAnArray(array))
+
+// 21. Different ways to create object in javascript ? (Most asked)
+
+// Object in js is storing key and value pair
+
+// Object literal Syntax
+ 
+
+// const object ={
+//     name:'arif',
+//     age:25,
+//     displayInfo :  function() {
+//         console.log("object") 
+//     }
+// }
+
+
+// // console.log(object.displayInfo(),"ooo") // it's return undefined 
+// // This happens because object.displayInfo() is a function that logs "object" to the console but does not return any value, so its return value is undefined
+// object.displayInfo()
+
+// Object methods in JavaScript are functions defined as objects' properties
+
+// Object with a method
+
+
+const calculator = {
+    add : function(a,b) {
+        return a+b
+    },
+    subtract: function(a,b) {
+       return a-b;
+    }
 }
 
+console.log(calculator.add(2,3))
+console.log(calculator.subtract(6,3))
 
-console.log(flatAnArray(array))
+// JavaScript offers multiple ways to create objects, providing flexibility and versatility. The various methods of creating objects in javascript are:
+
+// Using an Object Literal  --->{}
+// Using the JavaScript Keyword new
+
+function Person(age,name,city) {
+    this.name = name;
+    this.age = age;
+    this.city = city;
+
+}
+
+const person1 = new Person('arif',22,'delhi');
+console.log(person1,"person1")
+
+// Creating an object with a constructor
+
+
+// Javascript object is mutable it's means add or remove or modification is allowed
+
+
+const newDat ={
+    name:'arif',
+    age:22
+}
+
+newDat.city='delhi';
+delete newDat.age
+console.log(newDat,"newDat")
+
+
+// 22. Whats the difference between Object.keys,values and entries
+
+let data ={
+    name:'arif',
+    age:22
+}
+
+console.log(Object.keys(data))   /// it's return the array of key
+console.log(Object.values(data)) // it's return the array of value
+console.log(Object.entries(data)) // This will return array of [key,value] pairs.
+
+
+// 23. Whats the difference between Object.freeze() vs Object.seal()
+
+// Object.freeze(not allowed modification of exisitence property or not able to add new property)
+
+
+let freez ={
+    a:10
+}
+
+Object.freeze(freez);
+
+freez.age=23;
+console.log(freez,"freez")
+
+// Object.seal( is not add new property but it can be modify existence property)
+
+let seel ={
+    name:'ari'
+}
+
+Object.seal(seel);
+seel.name =333;
+console.log(seel,"seel")
