@@ -518,20 +518,51 @@
 
 // If we add the property to later stage to a function which can be accross all instance 
 
-function Student() {
-  this.name='mohd';
-  this.exp="8"
-}
+// function Student() {
+//   this.name='mohd';
+//   this.exp="8"
+// }
 
-Student.prototype.company="absolutetravel";
+// Student.prototype.company="absolutetravel";
 
-let std1 = new Student();
-std1.exp="9";
-let std2 = new Student();
-std2.exp="34"
+// let std1 = new Student();
+// std1.exp="9";
+// let std2 = new Student();
+// std2.exp="34"
 
-console.log({std1,std2})
+// console.log({std1,std2})
 // let std1 = new Student();
 // std1.exp = "9"
 // let std2 = new Student();
 // std2.exp = "10"
+
+
+// 26. What is generator function in javascript ?
+// A generator function is a function which can be pause and resumed at any point of during  execution
+
+// It returns an object which contains 2 properties. i.e., done and value.
+// done: the yielded value
+// value: true if function code has finished. else false.
+
+// what is iife 
+// IIFE means immediately invoked function expression.
+// functions which are executed immediately once they are mounted to the stack
+// is called iife
+
+// (function(){
+//  console.log("2222")
+// })()
+
+// 28. What is CORS ? (Most asked)
+
+// CORS means cross origin resource sharing. 
+
+// 30. What is authentication vs authorization ? (Most asked)
+
+
+// Authentication : it is the process of verifying who the user it .
+// Authorization  :  it is the process of verifying what they have to access it . what files and data user access to
+
+
+// 33. Slice vs Splice in javascript ? (Most helpful in problem solving)
+
