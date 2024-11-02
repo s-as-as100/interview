@@ -415,81 +415,123 @@
 // Object with a method
 
 
-const calculator = {
-    add : function(a,b) {
-        return a+b
-    },
-    subtract: function(a,b) {
-       return a-b;
-    }
+// const calculator = {
+//     add : function(a,b) {
+//         return a+b
+//     },
+//     subtract: function(a,b) {
+//        return a-b;
+//     }
+// }
+
+// console.log(calculator.add(2,3))
+// console.log(calculator.subtract(6,3))
+
+// // JavaScript offers multiple ways to create objects, providing flexibility and versatility. The various methods of creating objects in javascript are:
+
+// // Using an Object Literal  --->{}
+// // Using the JavaScript Keyword new
+
+// function Person(age,name,city) {
+//     this.name = name;
+//     this.age = age;
+//     this.city = city;
+
+// }
+
+// const person1 = new Person('arif',22,'delhi');
+// console.log(person1,"person1")
+
+// // Creating an object with a constructor
+
+
+// // Javascript object is mutable it's means add or remove or modification is allowed
+
+
+// const newDat ={
+//     name:'arif',
+//     age:22
+// }
+
+// newDat.city='delhi';
+// delete newDat.age
+// console.log(newDat,"newDat")
+
+
+// // 22. Whats the difference between Object.keys,values and entries
+
+// let data ={
+//     name:'arif',
+//     age:22
+// }
+
+// console.log(Object.keys(data))   /// it's return the array of key
+// console.log(Object.values(data)) // it's return the array of value
+// console.log(Object.entries(data)) // This will return array of [key,value] pairs.
+
+
+// // 23. Whats the difference between Object.freeze() vs Object.seal()
+
+// // Object.freeze(not allowed modification of exisitence property or not able to add new property)
+
+
+// let freez ={
+//     a:10
+// }
+
+// Object.freeze(freez);
+
+// freez.age=23;
+// console.log(freez,"freez")
+
+// // Object.seal( is not add new property but it can be modify existence property)
+
+// let seel ={
+//     name:'ari'
+// }
+
+// Object.seal(seel);
+// seel.name =333;
+// console.log(seel,"seel")
+
+// 24. What is a polyfill in javascript ?
+
+// A polyfill is a piece of code  which provide modern functionality to older browser support 
+
+// Polyfill for foreach:
+
+// const data =['hello', 'world'];
+
+// data.forEach((item,i) =>{
+//     console.log('item',item,i)
+// })
+
+
+// Array.prototype.forEach((callback,i) =>{
+//     for (let i = 0; i <= this.length-1; i++) {
+//          callback(this[i],i)
+//     }
+// })
+
+
+// what is prototype in js
+
+// If we add the property to later stage to a function which can be accross all instance 
+
+function Student() {
+  this.name='mohd';
+  this.exp="8"
 }
 
-console.log(calculator.add(2,3))
-console.log(calculator.subtract(6,3))
+Student.prototype.company="absolutetravel";
 
-// JavaScript offers multiple ways to create objects, providing flexibility and versatility. The various methods of creating objects in javascript are:
+let std1 = new Student();
+std1.exp="9";
+let std2 = new Student();
+std2.exp="34"
 
-// Using an Object Literal  --->{}
-// Using the JavaScript Keyword new
-
-function Person(age,name,city) {
-    this.name = name;
-    this.age = age;
-    this.city = city;
-
-}
-
-const person1 = new Person('arif',22,'delhi');
-console.log(person1,"person1")
-
-// Creating an object with a constructor
-
-
-// Javascript object is mutable it's means add or remove or modification is allowed
-
-
-const newDat ={
-    name:'arif',
-    age:22
-}
-
-newDat.city='delhi';
-delete newDat.age
-console.log(newDat,"newDat")
-
-
-// 22. Whats the difference between Object.keys,values and entries
-
-let data ={
-    name:'arif',
-    age:22
-}
-
-console.log(Object.keys(data))   /// it's return the array of key
-console.log(Object.values(data)) // it's return the array of value
-console.log(Object.entries(data)) // This will return array of [key,value] pairs.
-
-
-// 23. Whats the difference between Object.freeze() vs Object.seal()
-
-// Object.freeze(not allowed modification of exisitence property or not able to add new property)
-
-
-let freez ={
-    a:10
-}
-
-Object.freeze(freez);
-
-freez.age=23;
-console.log(freez,"freez")
-
-// Object.seal( is not add new property but it can be modify existence property)
-
-let seel ={
-    name:'ari'
-}
-
-Object.seal(seel);
-seel.name =333;
-console.log(seel,"seel")
+console.log({std1,std2})
+// let std1 = new Student();
+// std1.exp = "9"
+// let std2 = new Student();
+// std2.exp = "10"
