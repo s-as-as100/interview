@@ -566,3 +566,67 @@
 
 // 33. Slice vs Splice in javascript ? (Most helpful in problem solving)
 
+
+// Slice is shawllow copy but not modified an existing array
+// const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+// const result = fruits.slice(0,1);
+// console.log(result)
+// slice is doesn't modified the existing array
+// return a new array with the starting index without including the last element
+// Returns: A new array with elements from the specified start index up to (but not including) the end index.
+
+
+// Splice is a js method for  add or remove the element from the array . or modifying the existing array
+
+
+// 34. What is setTimeOut in javascript ?
+
+// SetTImeout is a callback function is execute or evaluate the expression after specific milliseconds
+
+
+// setTimeout(()=>{
+//     console.log('setTimeOut',)
+// },5000)
+
+
+// 35. What is setInterval in javascript ?
+// setInterval is a callback function is execute or evaluate the expression after spefic timer and not stoped until 
+// the you clear the intervval
+
+// const timerId= setInterval(()=>{
+//     console.log('setInterval')
+// },1000)
+
+// setTimeout(() => {
+//     clearInterval(timerId)
+// }, 5000);
+// "Executed every 1 second" is printed every second. After 5 seconds, clearInterval stops the repeated execution.
+
+
+// 36. What are Promises in javascript ?
+
+// Promise is a js object which represent is eventually completion or failure of an asychronous operation in js
+
+
+// pending 
+// fullfilled
+// rejected
+// setteled
+
+
+let promise = new Promise(function(resolve,reject){
+    let x ="mohd"
+    let y = "mohd"
+    if(x===y) {
+        resolve('valid or true')
+    } 
+    else {
+        let error = new Error("Invalid")
+        reject(error)
+    }
+})
+.then((response)=>{
+console.log(response)
+}).catch((err) =>{
+    console.log(err)
+})
