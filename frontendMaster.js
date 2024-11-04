@@ -614,19 +614,107 @@
 // setteled
 
 
-let promise = new Promise(function(resolve,reject){
-    let x ="mohd"
-    let y = "mohd"
-    if(x===y) {
-        resolve('valid or true')
-    } 
-    else {
-        let error = new Error("Invalid")
-        reject(error)
-    }
-})
-.then((response)=>{
-console.log(response)
-}).catch((err) =>{
-    console.log(err)
-})
+// let promise = new Promise(function(resolve,reject){
+//     let x ="mohd"
+//     let y = "mohd"
+//     if(x===y) {
+//         resolve('valid or true')
+//     } 
+//     else {
+//         let error = new Error("Invalid")
+//         reject(error)
+//     }
+// })
+// .then((response)=>{
+// console.log(response)
+// }).catch((err) =>{
+//     console.log(err)
+// })
+
+
+// 37. Differences between Promise.all, allSettled, any, race ?
+
+// 1. Promise.all  --> wait all promise to be fullfilled or reject 
+// if all the task should be fullfilled or and if one fails, the whole operation should fail.
+
+// let fetchData1 =fetch("https://jsonplaceholder.typicode.com/todos");
+// let fetchData2 = fetch("https://jsonplaceholder.typicode.com/todos")
+
+//  Promise.all([fetchData1,fetchData2])
+//  .then((results) =>
+// {
+//         return Promise.all(results.map(result =>console.log( result.json())));
+
+// })
+//   .then((data) => console.log(data))  
+
+
+
+//   2. Promise.allSettled
+
+// Wait all the promise is settled means success
+
+
+// Method	Resolves When	Rejects When	Use Case
+// Promise.all	All promises are fulfilled	Any one promise is rejected	All tasks must succeed
+// Promise.allSettled	All promises are settled (either fulfilled or rejected)	Never rejects (always resolves)	Collect all results regardless of outcome
+// Promise.any	The first promise to fulfill	All promises are rejected	Need only one task to succeed
+// Promise.race	The first promise to settle (fulfill or reject)	The first promise to settle with rejection	Get the result of the fastest task
+
+
+
+// 38. What is a callstack in javascript ? (Very rare)
+
+// Callstack is maintain the order of execution of execution context
+
+// 39. What is a closure ? (Most asked in all the interviews 99%
+// chance)
+
+// A function along with the outer environment together form a closure
+
+// Each and Every function is remember there outer most scope variables
+
+// Even when this function is executed in some outer scope(not in original
+// scope) it still remembers the outer lexical environment where it was
+// originally present in the co
+
+
+// Example
+
+
+// function outer() {
+//     let a =10;
+//     function inner(){
+//         console.log(a,'a')
+//     }
+//     return inner
+// }
+
+// const result = outer()
+// console.log(result,"resss")
+
+
+// 40. What are callbacks in javascript ?
+// A callback is function is passed to as argument to another function which can be  execute later
+
+
+
+function print() {
+    console.log('print')
+}
+
+
+function callback() {
+    console.log('callback')
+    print()
+}
+
+callback()
+
+
+// use cases  --> settimeout , handling event, asynchorous
+
+// 41. What are Higher Order Functions in javascript ?
+
+
+// A function is which takes another function as arguments or return as function as an output
