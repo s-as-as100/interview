@@ -699,17 +699,17 @@
 
 
 
-function print() {
-    console.log('print')
-}
+// function print() {
+//     console.log('print')
+// }
 
 
-function callback() {
-    console.log('callback')
-    print()
-}
+// function callback() {
+//     console.log('callback')
+//     print()
+// }
 
-callback()
+// callback()
 
 
 // use cases  --> settimeout , handling event, asynchorous
@@ -718,3 +718,75 @@ callback()
 
 
 // A function is which takes another function as arguments or return as function as an output
+
+// Advantages --> callback, abstraction
+
+// What is cookies 
+// Store the user information on webpage
+// Store the key value pair 
+
+// 𝟒. 𝐈𝐧 𝐬𝐭𝐫𝐢𝐜𝐭 𝐦𝐨𝐝𝐞, 𝐖𝐡𝐚𝐭 𝐰𝐢𝐥𝐥 𝐭𝐡𝐞 𝐯𝐚𝐥𝐮𝐞 𝐨𝐟 𝐭𝐡𝐢𝐬 𝐢𝐧𝐬𝐢𝐝𝐞 𝐚 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧 ?
+
+
+// function x() {
+//     console.log(this)
+// }
+
+// x()
+
+// function strict() {
+//       'use strict';
+//         console.log(this)  
+//         // output is undefined beacuse in non strict mode function is called in global context
+//         // u can access to this  window global object 
+// }
+
+// strict()
+
+// 48. What are Interceptors ?
+ 
+// Interceptors is allow to modify the request and response before send to the server or recieved from the server
+
+// axios.interceptors.request.use((config)=>{
+// if(longUrls.include(url)){
+// config.timeout = 1000;
+// }
+// return config;
+// }
+// axios.interceptors.response.use((response)=>{
+// return response;
+// })
+
+// What is the difference between Shallow copy and deep copy ?
+
+// 52. What is event bubbling ?
+
+// 55. What are the differences between some and every in
+// javascript ?
+
+// const array = [1,2,3,4,6,7,8,9];
+// const result  = array.some((el)=> el>4);
+// const resultEvery  = array.every((el)=> el>4);
+
+// console.log({result,resultEvery})
+
+
+// getData1()
+// getData();
+// function getData1(){
+//  console.log("getData11")
+// }
+// var getData = () => {
+//  console.log("Hello")
+// }
+
+
+
+let a = true;
+setTimeout(() => {
+ a = false;
+}, 2000)
+
+while(a) {
+ console.log(' -- inside whilee -- ');
+}
