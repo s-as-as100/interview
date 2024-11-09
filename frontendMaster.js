@@ -395,7 +395,7 @@
 // Object in js is storing key and value pair
 
 // Object literal Syntax
- 
+
 
 // const object ={
 //     name:'arif',
@@ -744,7 +744,7 @@
 // strict()
 
 // 48. What are Interceptors ?
- 
+
 // Interceptors is allow to modify the request and response before send to the server or recieved from the server
 
 // axios.interceptors.request.use((config)=>{
@@ -782,11 +782,100 @@
 
 
 
-let a = true;
-setTimeout(() => {
- a = false;
-}, 2000)
+// let a = true;
+// setTimeout(() => {
+//  a = false;
+// }, 2000)
 
-while(a) {
- console.log(' -- inside whilee -- ');
-}
+// while(a) {
+//  console.log(' -- inside whilee -- ');
+// }
+
+// 6. Write a JavaScript program to find the maximum number in an array.
+
+// const array = [1,2,3,66,5,6,8,9,22,99];
+
+
+// function findMaximumNumberInArray(array) {
+//    let max =array[0];
+//      for(let i =0 ; i<array.length; i++) {
+//         if(array[i]>max) {
+//             max = array[i];
+//          }
+//      }
+//      return max
+//   }
+
+// console.log(findMaximumNumberInArray(array))
+
+// 13. What is useMemo ?
+
+// useMemo hooks is used for optimization purpose
+// it is used for cache the result of function between re-renders
+
+// Example : We have a data visualization component where 
+// we display the chart on the based on performing calculation
+// on some large data sets. // By using useMemo we can cache the 
+// result , where  ensure that component does not recalculate on every re-renders
+
+// const DataVisualization = ({ data }) => {
+//  const processedData = useMemo(() => {
+//  // Perform expensive computations on data
+//  // ...
+//  return processedData;
+//  }, [data]);
+//  // Render the visualization using the processed data
+// }
+
+
+// 14. What is useCallback ->?
+// usecallback is cache the function defination itself
+
+// it's take an two arguments which an array of dependencies. the  callback function
+// is only re created if one of the depdencies is changes
+
+
+// when the SomeComponent is rendered on the screen the useCallback gives you the cached version of the handleClick method
+
+
+// function testCallBack() {
+//     const handleCallBack = useCallback(() => {
+//         console.log('user click')
+//     }, [])
+
+//     return <button onClick={handleCallBack}>hello</button>
+// }
+
+
+// Directly creating a function will create a new instance of the function every time the component re renders
+// useCallback will cache the function and reuse the function definition thus giving the cached copy every time
+
+// 34. What are Portals in react ?
+
+// Portal are the way to render the child component outside the parent dom hierarchy
+
+// How to send data from child to parent using callback functions ?
+
+// function ParentComponent() {
+//   const[data,setData]=   useState("");
+
+//   const update =(data) =>{
+//       setData(data)
+//   }
+
+//   return(
+//     <ChildComponent data={update}/>
+//   )
+// }
+
+// function ChildComponent({data}) {
+
+// const sendDataToParent =() =>{
+//        data("send data to child to parent")
+// }
+
+//   return(
+//     <div></div>
+//   )
+
+// }
