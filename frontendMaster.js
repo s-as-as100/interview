@@ -1,5 +1,19 @@
 // const str = "helloworld";
 
+const str= "hello";
+
+const obj={};
+
+for (const x of str) {
+    if(obj[x]) {
+        obj[x]+=1
+    }
+    else {
+        obj[x]=1
+    }
+}
+console.log(obj)
+
 // const obj = {};
 // for (const x of str) {
 //     if(obj[x]){
@@ -879,3 +893,43 @@
 //   )
 
 // }
+
+
+// function getDistinctIntegers(...arrays) {
+//     // Create a frequency map to count occurrences of each integer
+//     const frequencyMap = new Map();
+
+//     // Loop through each array
+//     arrays.forEach(array => {
+//         array.forEach(num => {
+//             // Update the count for each number
+//             frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+//         });
+//     });
+
+//     // Filter the map for numbers that appear exactly once and return them as an array
+//     return Array.from(frequencyMap.keys()).filter(num => frequencyMap.get(num) === 1);
+// }
+
+// // Example usage:
+// const result = getDistinctIntegers([1, 2, 3], [2, 3, 4], [3, 4, 5]);
+// console.log(result); // Output: [1, 5]
+
+
+ 
+function getDistinctIntegers(...arrays){
+
+    const flattenArray = arrays.flat();
+
+    const countElement = flattenArray.reduce((acc,num) =>{
+         acc[num] = (acc[num]||0)+1;
+        return acc
+    },{})
+
+    return Object.keys(countElement)
+    .filter(key =>countElement[key]===1).map(Number)
+         
+     }
+
+const result = getDistinctIntegers([1,2,3],[2,3,4,7],[3,4,5,7]);
+ console.log(result)
