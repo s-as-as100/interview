@@ -1,18 +1,18 @@
 // const str = "helloworld";
 
-const str= "hello";
+// const str= "hello";
 
-const obj={};
+// const obj={};
 
-for (const x of str) {
-    if(obj[x]) {
-        obj[x]+=1
-    }
-    else {
-        obj[x]=1
-    }
-}
-console.log(obj)
+// for (const x of str) {
+//     if(obj[x]) {
+//         obj[x]+=1
+//     }
+//     else {
+//         obj[x]=1
+//     }
+// }
+// console.log(obj)
 
 // const obj = {};
 // for (const x of str) {
@@ -917,19 +917,88 @@ console.log(obj)
 
 
  
-function getDistinctIntegers(...arrays){
+// function getDistinctIntegers(...arrays){
 
-    const flattenArray = arrays.flat();
+//     const flattenArray = arrays.flat();
 
-    const countElement = flattenArray.reduce((acc,num) =>{
-         acc[num] = (acc[num]||0)+1;
-        return acc
-    },{})
+//     const countElement = flattenArray.reduce((acc,num) =>{
+//          acc[num] = (acc[num]||0)+1;
+//         return acc
+//     },{})
 
-    return Object.keys(countElement)
-    .filter(key =>countElement[key]===1).map(Number)
+//     return Object.keys(countElement)
+//     .filter(key =>countElement[key]===1).map(Number)
          
-     }
+//      }
 
-const result = getDistinctIntegers([1,2,3],[2,3,4,7],[3,4,5,7]);
- console.log(result)
+// const result = getDistinctIntegers([1,2,3],[2,3,4,7],[3,4,5,7]);
+//  console.log(result)
+
+
+
+
+
+
+// function findDistinct(...arrays) {
+//     const flatAnArray = arrays.flat();
+
+//     const countElement = flatAnArray.reduce((acc,num) =>{
+//         acc[num] =(acc[num]||0)+1
+//         return acc
+//     },{})
+
+//     return  Object.keys(countElement).filter(num => countElement[num]===1).map(Number)
+
+//  }
+
+// console.log(findDistinct([1,2,3],[2,3,4],[9,8,1]))
+ 
+
+// function findPrimeNumber(n) {
+   
+//     if(n<=1) {
+//         return "not a prime number"
+//     }
+
+//     for(let i = 2 ; i<=Math.sqrt(n);i++) {
+//         if(n%2===0) {
+//             return "not a prime number"
+//         }
+//     }
+//     return "prime number"
+
+// }
+
+// console.log(findPrimeNumber(12))
+
+//  array.forEach(element => {
+//      if(Array.isArray(element)) {
+//         result = result.concat(flatAnArray(element))
+//      }
+//      else {
+//         result.push(element)
+//      }
+//    });
+
+
+// const array = [1, 2, 3, [4, 5], [6, 7, [8, [9], 10]]];
+
+
+// function flatAnArray(array){
+//     let result =[];
+
+//     array.forEach(element => {
+//          if(Array.isArray(element)) {
+//             result = result.concat(flatAnArray(element))
+//          }
+//          else{
+//             result.push(element)
+//          }
+//     });
+
+
+//   return result
+
+// }
+
+// console.log(flatAnArray(array))
