@@ -10,6 +10,7 @@
 //     }
 //     else {
 //         obj[x]=1
+
 //     }
 // }
 // console.log(obj)
@@ -1002,3 +1003,99 @@
 // }
 
 // console.log(flatAnArray(array))
+
+// function findPrimeNumber(num) {
+    
+//     if(num<=1){
+//         return "not a prime"
+//     }
+
+//     if(num%2===0){
+//        return "not a prime"
+
+//     }
+
+//     for (let i = 3; i < Math.sqrt(num); i+=2) {
+//          if(num%i===0) {
+//             return "not a prime"
+//          }
+//     }
+
+//     return "prime number"
+
+// }
+
+// console.log(findPrimeNumber(4))
+
+
+// function reveserString(str) {
+//   let strReverse="";
+
+//    for (let i = str.length - 1; i >= 0; i--) {
+//     strReverse += str[i];
+//   }
+  
+//   return strReverse;
+// }
+
+// console.log(reveserString("mamhf"))
+
+
+
+// let array = [1,2,3,4,[5,6],[4,5,6,[5,6,7]]]
+
+// function flatAnArray(array) {
+
+
+//   let newArray=[];
+
+
+//   array.forEach(element => {
+//     if(Array.isArray(element)) {
+//       newArray= newArray.concat(flatAnArray(element))
+//     }
+//     else{
+//       newArray.push(element)
+//     }
+//   });
+
+//   return newArray;
+
+// }
+
+// console.log(flatAnArray(array))
+
+
+
+// const str="hello";
+
+// let obj ={};
+
+// for (const x of str) {
+
+//   if(obj[x]) {
+//     obj[x]+=1
+//   }
+//   else {
+//     obj[x]=1
+//   }
+  
+// }
+
+// console.log(obj)
+
+ 
+const arrayNew = [1, 2,11, 1, 3, 4, 2, 2, 1, 5, 6,7,7,];
+
+function removeDublicate(arr) {
+  let uniqueArray=[];
+   
+   arr.forEach(element => {
+      if(!uniqueArray.includes(element)){
+           uniqueArray.push(element)
+      }
+  });
+return uniqueArray
+}
+
+console.log(removeDublicate(arrayNew))

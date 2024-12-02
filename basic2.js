@@ -93,16 +93,16 @@
 // calls and returned the catch result when the same inputs occurs again
 
 
-function fib(n){
-    if(n<2) {
-        return n;
+// function fib(n){
+//     if(n<2) {
+//         return n;
 
-    }
-    return fib(n-1) +fib(n-2)
-}
+//     }
+//     return fib(n-1) +fib(n-2)
+// }
 
-// console.time();
-// console.log(fib(3));
+// // console.time();
+// console.log(fib(3),"ddddd");
 // console.log(fib(3)); // why not giev same reuslt
 // console.log(fib(3));
 // console.timeEnd()
@@ -112,40 +112,46 @@ function fib(n){
 
 
 
-function memozietionFunction(fn) {
+// function memozietionFunction(fn) {
   
-    const cach= new Map();  //{}
+//     const cach= new Map();  //{}
    
-     return function (...args) {
-        const key = args.toString();
+//      return function (...args) {
+//         const key = args.toString();
 
-        if(cach.has(key)) {
-            return cach.get(key);
-        }
-        cach.set(key, fn(...args)) ;
-        return cach.get(key);
-     }
+//         if(cach.has(key)) {
+//             return cach.get(key);
+//         }
+//         cach.set(key, fn(...args)) ;
+//         return cach.get(key);
+//      }
 
-}
+// }
 
-console.time();
+// console.time();
  
-memozietionFunction(fib(30));
+// memozietionFunction(fib(30));
  
 
-console.timeEnd()
+// console.timeEnd()
 
 
-console.log(typeof [])
+// console.log(typeof [])
 
 
-var foo = { n: 1 };
-var bar = foo;
-foo.x = foo = { n: 2 };
-console.log(foo,bar)
+// var foo = { n: 1 };
+// var bar = foo;
+// foo.x = foo = { n: 2 };
+// console.log(foo,bar)
 
-console.log(foo.x);
-console.log(bar.x);
+// console.log(foo.x);
+// console.log(bar.x);
 
-console.log(typeof function() {});
-console.log(typeof class {});
+// console.log(typeof function() {});
+// console.log(typeof class {});
+// console.log(typeof null)
+
+let a;
+a=10;
+a=20;
+console.log(a,"dd")
