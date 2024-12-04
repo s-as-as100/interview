@@ -279,7 +279,7 @@
 //     // const result = str === reverseString ? "Palindrome" : "Not a Palindrome";
 //     // return result ;
 //       let length = str.length;
-
+  //  str.sp("")
 //     for(let i=0 ; i<length/2; i++) {
 //         if(str[i]!==str[length-i-1]) {
 //             return "Not a palindrome"
@@ -352,7 +352,7 @@
 
 // let a = 3;
 // let b = new Number(3);
-// console.log(b,"bbbbbbbbbb")
+// // console.log(b,"bbbbbbbbbb")
 // let c = 3;
 // console.log(a == b);
 // console.log(a === b);
@@ -780,18 +780,18 @@
 // javascript ?
 
 // const array = [1,2,3,4,6,7,8,9];
-// const result  = array.some((el)=> el>4);
+// const resultSome  = array.some((el)=> el>4);
 // const resultEvery  = array.every((el)=> el>4);
 
-// console.log({result,resultEvery})
+// console.log({resultSome,resultEvery})
 
 
 // getData1()
-// getData();
+// // getData();
 // function getData1(){
 //  console.log("getData11")
 // }
-// var getData = () => {
+// // var getData = () => {
 //  console.log("Hello")
 // }
 
@@ -1085,17 +1085,138 @@
 // console.log(obj)
 
  
-const arrayNew = [1, 2,11, 1, 3, 4, 2, 2, 1, 5, 6,7,7,];
+// const arrayNew = [1, 2,11, 1, 3, 4, 2, 2, 1, 5, 6,7,7,];
 
-function removeDublicate(arr) {
-  let uniqueArray=[];
+// function removeDublicate(arr) {
+//   let uniqueArray=[];
    
-   arr.forEach(element => {
-      if(!uniqueArray.includes(element)){
-           uniqueArray.push(element)
-      }
-  });
-return uniqueArray
-}
+//    arr.forEach(element => {
+//       if(!uniqueArray.includes(element)){
+//            uniqueArray.push(element)
+//       }
+//   });
+// return uniqueArray
+// }
 
-console.log(removeDublicate(arrayNew))
+// console.log(removeDublicate(arrayNew))
+
+// const data = [
+//   { name: 'Alice', scores: [10, 20, 30, 40] },
+//   { name: 'Bob', scores: [15, 25, 35, 45] },
+//   { name: 'Charlie', scores: [20, 30, 40, 50]}
+// ];
+
+// let highScores=35;
+// const dataNew  =  data.map((el)=>{
+//   return  {
+//     name:el.name,
+//     highScores:el.scores.filter((el) =>el>highScores)
+//   }
+// })
+
+// console.log(dataNew)
+
+// const str = "aaasdgggassb"
+
+
+// let obj ={}
+
+// let uniqueKeyArray=[]
+
+// for (const x of str) {
+    
+//   if(obj[x]){
+//      obj[x]+=1
+//   }
+  
+//   else {
+//     obj[x]=1
+//   }
+  
+// }
+
+// for (const x in obj) {
+
+//   if(obj[x]===1){
+//     uniqueKeyArray.push(x)
+//   }
+  
+// }
+
+// console.log(uniqueKeyArray);
+
+// var - fc, hs
+// let and const --> resign, no , block scoped
+
+// var a = 10;
+
+// function test() {
+//     var a = 20;
+//     console.log(a);
+// }
+
+// console.log(a)
+// test();
+
+
+ const objNew ={
+  name:2,
+  address:{
+    city:"delhi"
+  }
+ }
+
+ let expectedObjNew={};
+
+ function flatAnObject(objNew,joinKey) {
+  
+  for (const key in objNew) {
+
+    if(typeof objNew[key]==="object") {
+      flatAnObject(objNew[key],key)   
+  
+    }
+    else {
+      expectedObjNew[key+joinKey]= objNew[key]
+
+    }
+       
+  }
+
+ }
+
+ flatAnObject(objNew,"");
+ console.log("expectedObjNew",expectedObjNew)
+ // output -->  {name:2,address_city:delhi}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(obj)
+
+// 
+// [a, b]
+
+
+
+ 
+ 
+// Expected Result:
+// [
+//   { name: 'Alice', highScores: [40] },
+//   { name: 'Bob', highScores: [35, 45] },
+//   { name: 'Charlie', highScores: [40, 50] }
+// ]
