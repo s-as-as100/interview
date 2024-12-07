@@ -279,7 +279,7 @@
 //     // const result = str === reverseString ? "Palindrome" : "Not a Palindrome";
 //     // return result ;
 //       let length = str.length;
-  //  str.sp("")
+//  str.sp("")
 //     for(let i=0 ; i<length/2; i++) {
 //         if(str[i]!==str[length-i-1]) {
 //             return "Not a palindrome"
@@ -341,7 +341,6 @@
 
 // console.log(reverseString("hello"))
 
-
 // function guessArray() {
 //  let a = [1, 2];
 //  let b = [1, 2];
@@ -358,7 +357,6 @@
 // console.log(a === b);
 // console.log(b === c);
 
-
 // function job(){
 //  return new Promise((resolve,reject)=>{
 //  reject()
@@ -374,7 +372,6 @@
 // }).then(()=>{
 //  console.log("4444444444")
 // })
-
 
 // let cd=0;
 // let id = setInterval(() => {
@@ -402,7 +399,6 @@
 //    return result;
 // }
 
-
 // console.log(flatAnArray(array))
 
 // 21. Different ways to create object in javascript ? (Most asked)
@@ -411,24 +407,21 @@
 
 // Object literal Syntax
 
-
 // const object ={
 //     name:'arif',
 //     age:25,
 //     displayInfo :  function() {
-//         console.log("object") 
+//         console.log("object")
 //     }
 // }
 
-
-// // console.log(object.displayInfo(),"ooo") // it's return undefined 
+// // console.log(object.displayInfo(),"ooo") // it's return undefined
 // // This happens because object.displayInfo() is a function that logs "object" to the console but does not return any value, so its return value is undefined
 // object.displayInfo()
 
 // Object methods in JavaScript are functions defined as objects' properties
 
 // Object with a method
-
 
 // const calculator = {
 //     add : function(a,b) {
@@ -459,9 +452,7 @@
 
 // // Creating an object with a constructor
 
-
 // // Javascript object is mutable it's means add or remove or modification is allowed
-
 
 // const newDat ={
 //     name:'arif',
@@ -471,7 +462,6 @@
 // newDat.city='delhi';
 // delete newDat.age
 // console.log(newDat,"newDat")
-
 
 // // 22. Whats the difference between Object.keys,values and entries
 
@@ -484,11 +474,9 @@
 // console.log(Object.values(data)) // it's return the array of value
 // console.log(Object.entries(data)) // This will return array of [key,value] pairs.
 
-
 // // 23. Whats the difference between Object.freeze() vs Object.seal()
 
 // // Object.freeze(not allowed modification of exisitence property or not able to add new property)
-
 
 // let freez ={
 //     a:10
@@ -511,7 +499,7 @@
 
 // 24. What is a polyfill in javascript ?
 
-// A polyfill is a piece of code  which provide modern functionality to older browser support 
+// A polyfill is a piece of code  which provide modern functionality to older browser support
 
 // Polyfill for foreach:
 
@@ -521,17 +509,15 @@
 //     console.log('item',item,i)
 // })
 
-
 // Array.prototype.forEach((callback,i) =>{
 //     for (let i = 0; i <= this.length-1; i++) {
 //          callback(this[i],i)
 //     }
 // })
 
-
 // what is prototype in js
 
-// If we add the property to later stage to a function which can be accross all instance 
+// If we add the property to later stage to a function which can be accross all instance
 
 // function Student() {
 //   this.name='mohd';
@@ -551,7 +537,6 @@
 // let std2 = new Student();
 // std2.exp = "10"
 
-
 // 26. What is generator function in javascript ?
 // A generator function is a function which can be pause and resumed at any point of during  execution
 
@@ -559,7 +544,7 @@
 // done: the yielded value
 // value: true if function code has finished. else false.
 
-// what is iife 
+// what is iife
 // IIFE means immediately invoked function expression.
 // functions which are executed immediately once they are mounted to the stack
 // is called iife
@@ -570,17 +555,14 @@
 
 // 28. What is CORS ? (Most asked)
 
-// CORS means cross origin resource sharing. 
+// CORS means cross origin resource sharing.
 
 // 30. What is authentication vs authorization ? (Most asked)
-
 
 // Authentication : it is the process of verifying who the user it .
 // Authorization  :  it is the process of verifying what they have to access it . what files and data user access to
 
-
 // 33. Slice vs Splice in javascript ? (Most helpful in problem solving)
-
 
 // Slice is shawllow copy but not modified an existing array
 // const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
@@ -590,22 +572,18 @@
 // return a new array with the starting index without including the last element
 // Returns: A new array with elements from the specified start index up to (but not including) the end index.
 
-
 // Splice is a js method for  add or remove the element from the array . or modifying the existing array
-
 
 // 34. What is setTimeOut in javascript ?
 
 // SetTImeout is a callback function is execute or evaluate the expression after specific milliseconds
 
-
 // setTimeout(()=>{
 //     console.log('setTimeOut',)
 // },5000)
 
-
 // 35. What is setInterval in javascript ?
-// setInterval is a callback function is execute or evaluate the expression after spefic timer and not stoped until 
+// setInterval is a callback function is execute or evaluate the expression after spefic timer and not stoped until
 // the you clear the intervval
 
 // const timerId= setInterval(()=>{
@@ -617,24 +595,21 @@
 // }, 5000);
 // "Executed every 1 second" is printed every second. After 5 seconds, clearInterval stops the repeated execution.
 
-
 // 36. What are Promises in javascript ?
 
 // Promise is a js object which represent is eventually completion or failure of an asychronous operation in js
 
-
-// pending 
+// pending
 // fullfilled
 // rejected
 // setteled
-
 
 // let promise = new Promise(function(resolve,reject){
 //     let x ="mohd"
 //     let y = "mohd"
 //     if(x===y) {
 //         resolve('valid or true')
-//     } 
+//     }
 //     else {
 //         let error = new Error("Invalid")
 //         reject(error)
@@ -646,10 +621,9 @@
 //     console.log(err)
 // })
 
-
 // 37. Differences between Promise.all, allSettled, any, race ?
 
-// 1. Promise.all  --> wait all promise to be fullfilled or reject 
+// 1. Promise.all  --> wait all promise to be fullfilled or reject
 // if all the task should be fullfilled or and if one fails, the whole operation should fail.
 
 // let fetchData1 =fetch("https://jsonplaceholder.typicode.com/todos");
@@ -661,22 +635,17 @@
 //         return Promise.all(results.map(result =>console.log( result.json())));
 
 // })
-//   .then((data) => console.log(data))  
-
-
+//   .then((data) => console.log(data))
 
 //   2. Promise.allSettled
 
 // Wait all the promise is settled means success
-
 
 // Method	Resolves When	Rejects When	Use Case
 // Promise.all	All promises are fulfilled	Any one promise is rejected	All tasks must succeed
 // Promise.allSettled	All promises are settled (either fulfilled or rejected)	Never rejects (always resolves)	Collect all results regardless of outcome
 // Promise.any	The first promise to fulfill	All promises are rejected	Need only one task to succeed
 // Promise.race	The first promise to settle (fulfill or reject)	The first promise to settle with rejection	Get the result of the fastest task
-
-
 
 // 38. What is a callstack in javascript ? (Very rare)
 
@@ -693,9 +662,7 @@
 // scope) it still remembers the outer lexical environment where it was
 // originally present in the co
 
-
 // Example
-
 
 // function outer() {
 //     let a =10;
@@ -708,16 +675,12 @@
 // const result = outer()
 // console.log(result,"resss")
 
-
 // 40. What are callbacks in javascript ?
 // A callback is function is passed to as argument to another function which can be  execute later
-
-
 
 // function print() {
 //     console.log('print')
 // }
-
 
 // function callback() {
 //     console.log('callback')
@@ -726,22 +689,19 @@
 
 // callback()
 
-
 // use cases  --> settimeout , handling event, asynchorous
 
 // 41. What are Higher Order Functions in javascript ?
-
 
 // A function is which takes another function as arguments or return as function as an output
 
 // Advantages --> callback, abstraction
 
-// What is cookies 
+// What is cookies
 // Store the user information on webpage
-// Store the key value pair 
+// Store the key value pair
 
 // 𝟒. 𝐈𝐧 𝐬𝐭𝐫𝐢𝐜𝐭 𝐦𝐨𝐝𝐞, 𝐖𝐡𝐚𝐭 𝐰𝐢𝐥𝐥 𝐭𝐡𝐞 𝐯𝐚𝐥𝐮𝐞 𝐨𝐟 𝐭𝐡𝐢𝐬 𝐢𝐧𝐬𝐢𝐝𝐞 𝐚 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧 ?
-
 
 // function x() {
 //     console.log(this)
@@ -751,9 +711,9 @@
 
 // function strict() {
 //       'use strict';
-//         console.log(this)  
+//         console.log(this)
 //         // output is undefined beacuse in non strict mode function is called in global context
-//         // u can access to this  window global object 
+//         // u can access to this  window global object
 // }
 
 // strict()
@@ -785,7 +745,6 @@
 
 // console.log({resultSome,resultEvery})
 
-
 // getData1()
 // // getData();
 // function getData1(){
@@ -794,8 +753,6 @@
 // // var getData = () => {
 //  console.log("Hello")
 // }
-
-
 
 // let a = true;
 // setTimeout(() => {
@@ -809,7 +766,6 @@
 // 6. Write a JavaScript program to find the maximum number in an array.
 
 // const array = [1,2,3,66,5,6,8,9,22,99];
-
 
 // function findMaximumNumberInArray(array) {
 //    let max =array[0];
@@ -828,9 +784,9 @@
 // useMemo hooks is used for optimization purpose
 // it is used for cache the result of function between re-renders
 
-// Example : We have a data visualization component where 
+// Example : We have a data visualization component where
 // we display the chart on the based on performing calculation
-// on some large data sets. // By using useMemo we can cache the 
+// on some large data sets. // By using useMemo we can cache the
 // result , where  ensure that component does not recalculate on every re-renders
 
 // const DataVisualization = ({ data }) => {
@@ -842,16 +798,13 @@
 //  // Render the visualization using the processed data
 // }
 
-
 // 14. What is useCallback ->?
 // usecallback is cache the function defination itself
 
 // it's take an two arguments which an array of dependencies. the  callback function
 // is only re created if one of the depdencies is changes
 
-
 // when the SomeComponent is rendered on the screen the useCallback gives you the cached version of the handleClick method
-
 
 // function testCallBack() {
 //     const handleCallBack = useCallback(() => {
@@ -860,7 +813,6 @@
 
 //     return <button onClick={handleCallBack}>hello</button>
 // }
-
 
 // Directly creating a function will create a new instance of the function every time the component re renders
 // useCallback will cache the function and reuse the function definition thus giving the cached copy every time
@@ -895,7 +847,6 @@
 
 // }
 
-
 // function getDistinctIntegers(...arrays) {
 //     // Create a frequency map to count occurrences of each integer
 //     const frequencyMap = new Map();
@@ -916,8 +867,6 @@
 // const result = getDistinctIntegers([1, 2, 3], [2, 3, 4], [3, 4, 5]);
 // console.log(result); // Output: [1, 5]
 
-
- 
 // function getDistinctIntegers(...arrays){
 
 //     const flattenArray = arrays.flat();
@@ -929,16 +878,11 @@
 
 //     return Object.keys(countElement)
 //     .filter(key =>countElement[key]===1).map(Number)
-         
+
 //      }
 
 // const result = getDistinctIntegers([1,2,3],[2,3,4,7],[3,4,5,7]);
 //  console.log(result)
-
-
-
-
-
 
 // function findDistinct(...arrays) {
 //     const flatAnArray = arrays.flat();
@@ -953,10 +897,9 @@
 //  }
 
 // console.log(findDistinct([1,2,3],[2,3,4],[9,8,1]))
- 
 
 // function findPrimeNumber(n) {
-   
+
 //     if(n<=1) {
 //         return "not a prime number"
 //     }
@@ -981,9 +924,7 @@
 //      }
 //    });
 
-
 // const array = [1, 2, 3, [4, 5], [6, 7, [8, [9], 10]]];
-
 
 // function flatAnArray(array){
 //     let result =[];
@@ -997,7 +938,6 @@
 //          }
 //     });
 
-
 //   return result
 
 // }
@@ -1005,7 +945,7 @@
 // console.log(flatAnArray(array))
 
 // function findPrimeNumber(num) {
-    
+
 //     if(num<=1){
 //         return "not a prime"
 //     }
@@ -1027,28 +967,23 @@
 
 // console.log(findPrimeNumber(4))
 
-
 // function reveserString(str) {
 //   let strReverse="";
 
 //    for (let i = str.length - 1; i >= 0; i--) {
 //     strReverse += str[i];
 //   }
-  
+
 //   return strReverse;
 // }
 
 // console.log(reveserString("mamhf"))
 
-
-
 // let array = [1,2,3,4,[5,6],[4,5,6,[5,6,7]]]
 
 // function flatAnArray(array) {
 
-
 //   let newArray=[];
-
 
 //   array.forEach(element => {
 //     if(Array.isArray(element)) {
@@ -1065,8 +1000,6 @@
 
 // console.log(flatAnArray(array))
 
-
-
 // const str="hello";
 
 // let obj ={};
@@ -1079,17 +1012,16 @@
 //   else {
 //     obj[x]=1
 //   }
-  
+
 // }
 
 // console.log(obj)
 
- 
 // const arrayNew = [1, 2,11, 1, 3, 4, 2, 2, 1, 5, 6,7,7,];
 
 // function removeDublicate(arr) {
 //   let uniqueArray=[];
-   
+
 //    arr.forEach(element => {
 //       if(!uniqueArray.includes(element)){
 //            uniqueArray.push(element)
@@ -1118,21 +1050,20 @@
 
 // const str = "aaasdgggassb"
 
-
 // let obj ={}
 
 // let uniqueKeyArray=[]
 
 // for (const x of str) {
-    
+
 //   if(obj[x]){
 //      obj[x]+=1
 //   }
-  
+
 //   else {
 //     obj[x]=1
 //   }
-  
+
 // }
 
 // for (const x in obj) {
@@ -1140,7 +1071,7 @@
 //   if(obj[x]===1){
 //     uniqueKeyArray.push(x)
 //   }
-  
+
 // }
 
 // console.log(uniqueKeyArray);
@@ -1158,65 +1089,240 @@
 // console.log(a)
 // test();
 
+//  const objNew ={
+//   name:2,
+//   address:{
+//     city:"delhi"
+//   }
+//  }
 
- const objNew ={
-  name:2,
-  address:{
-    city:"delhi"
-  }
- }
+//  let expectedObjNew={};
 
- let expectedObjNew={};
+//  function flatAnObject(objNew,joinKey) {
 
- function flatAnObject(objNew,joinKey) {
-  
-  for (const key in objNew) {
+//   for (const key in objNew) {
 
-    if(typeof objNew[key]==="object") {
-      flatAnObject(objNew[key],key)   
-  
-    }
-    else {
-      expectedObjNew[key+joinKey]= objNew[key]
+//     if(typeof objNew[key]==="object") {
+//       flatAnObject(objNew[key],key)
 
-    }
-       
-  }
+//     }
+//     else {
+//       expectedObjNew[key+joinKey]= objNew[key]
 
- }
+//     }
 
- flatAnObject(objNew,"");
- console.log("expectedObjNew",expectedObjNew)
- // output -->  {name:2,address_city:delhi}
+//   }
 
+//  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  flatAnObject(objNew,"");
+//  console.log("expectedObjNew",expectedObjNew)
+// output -->  {name:2,address_city:delhi}
 
 // console.log(obj)
 
-// 
+//
 // [a, b]
 
+// // Expected Result:
+// // [
+// //   { name: 'Alice', highScores: [40] },
+// //   { name: 'Bob', highScores: [35, 45] },
+// //   { name: 'Charlie', highScores: [40, 50] }
+// // ]
 
+// // const array =[1,23,4,5,6,7,5];
 
- 
- 
-// Expected Result:
+// // // output = [1,24,28,33,39,46,51]
+
+// // function sumOfPreviousValues(array) {
+// //   const finalOutput=[];
+
+// //   // i=0; -->0+1
+// //   //
+// //   let sum=0;// initial
+// //   for (let i = 0; i < array.length; i++) {
+// //     finalOutput.push(array[i]+sum);
+// //     sum += array[i]
+// //    }
+
+// //   return finalOutput;
+
+// // }
+
+// // console.log(sumOfPreviousValues(array))
+
+// // check palindrome string
+
+// // let str=""
+
+// // output  --> mam --> true; nas-->false;
+
+// function checkStringIsPalindrome(str) {
+//   // console.log(str)
+// //    v-forof
+
+// //
+//     const reverseStr=str.split("").reverse().join("");
+//     const output = str===reverseStr?true:false
+
+//   // for (const el of str) {
+//   //   //  console.log(el)
+//   //   // if()
+//   // }
+
+//   return output
+// }
+
+// console.log(checkStringIsPalindrome("mam"));
+
+// const array1=[1,2,4,5];
+// const array2=[5,4,2,1];
+
+// // output -->  true or false
+
+// function matchArrayValues(array1,array2) {
+
+//    const output =array1.map(element => {
+//        return array2.includes(element);
+//     });
+
+//      const result=output.every((el)=>el);
+//      return result;
+//    // if(){
+
+//   // }
+//   // else {
+
+//   // }
+//     // console.log(output,"output")
+// }
+
+// console.log(matchArrayValues(array1,array2))
+
+// const array = [1,3,4,[3,4,5,[4,5]]];
+
+// output --> [1,3,4,3,4,5,4,5];
+
+// function flatAnArray(array){
+//   let outputArray=[];
+//   array.forEach(element => {
+//      if(Array.isArray(element)){
+//          outputArray.push(...flatAnArray(element))
+//      }
+//      else {
+//        outputArray.push(element)
+//      }
+//   });
+
+//   return outputArray
+// }
+
+// console.log(flatAnArray(array))
+
+// const array = [1, 2, 3, 5, 6];
+
+// // output --> target =8 -->[3,5]
+
+// function targetArray(array) {
+//   const target = 9;
+//   let output = [];
+
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] + array[i + 1] === target) {
+//       output.push(array[i], array[i + 1]);
+//     }
+//   }
+
+//   return output;
+// }
+// console.log(targetArray(array));
+
+// const people = [
+//   { name: "Alice", age: 25 },
+//   { name: "Bob", age: 17 },
+//   { name: "Charlie", age: 19 },
+//   { name: "David", age: 22 },
+//   { name: "Eve", age: 18 },
+// ];
+
+// // const {} = age;
+// const data = people.filter((el) => el.age * 20);
+// console.log(data);
+
+// regular();
+// dataNew();
+
+// function regular(){
+//   console.log('object')
+// }
+
+// const dataNew =()=>{
+//   console.log('hthi')
+// }
+
+// out  --> age> 20  output -->
+
 // [
-//   { name: 'Alice', highScores: [40] },
-//   { name: 'Bob', highScores: [35, 45] },
-//   { name: 'Charlie', highScores: [40, 50] }
+//  { name: 'Alice', age: 25 },
+//  { name: 'David', age: 22 },
 // ]
+
+
+
+
+// const array = [1,2,3,4,5];
+
+
+
+ const array= [[1,2,3,4,5,6],[3,4,5,2,1],[1,9]];
+
+ // output -->[6,9];
+
+ function flatAnArray(array) {
+  const flatArray=[];
+
+  for (let i = 0; i < array.length; i++) {
+      if(Array.isArray(array[i])){
+      flatArray.push(...flatAnArray(array[i]))
+        
+    }else{
+        flatArray.push(array[i])
+    }
+    
+  }
+  return flatArray;
+ }
+
+ console.log(flatAnArray(array))
+
+
+ function findDistinctElementInArray(...array){
+  const flatArr = flatAnArray(array);
+  let obj={};
+  const distinctElement=[];
+   
+  for (const element of flatArr) {
+ if(obj[element]) {
+       obj[element]+=1
+     }
+     else {
+      obj[element]=1
+     }
+ 
+ 
+  }
+
+
+  for (const key in obj) {
+    if(obj[key]===1) {
+       distinctElement.push(parseInt(key))
+    }
+   }
+   
+
+// console.log(distinctElement,"obbbbb")
+  return distinctElement
+
+ }
+console.log(findDistinctElementInArray([1,2,3,4,5,6],[3,4,5,2,1],[1,9]))
