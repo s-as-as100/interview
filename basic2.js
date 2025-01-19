@@ -151,7 +151,7 @@
 // console.log(typeof class {});
 // console.log(typeof null)
 
-let a;
-a=10;
-a=20;
-console.log(a,"dd")
+// let a;
+// a=10;
+// a=20;
+// console.log(a,"dd")
