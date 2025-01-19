@@ -1275,54 +1275,78 @@
 
 
 
- const array= [[1,2,3,4,5,6],[3,4,5,2,1],[1,9]];
+//  const array= [[1,2,3,4,5,6],[3,4,5,2,1],[1,9]];
 
- // output -->[6,9];
+//  // output -->[6,9];
 
- function flatAnArray(array) {
-  const flatArray=[];
+//  function flatAnArray(array) {
+//   const flatArray=[];
 
-  for (let i = 0; i < array.length; i++) {
-      if(Array.isArray(array[i])){
-      flatArray.push(...flatAnArray(array[i]))
+//   for (let i = 0; i < array.length; i++) {
+//       if(Array.isArray(array[i])){
+//       flatArray.push(...flatAnArray(array[i]))
         
-    }else{
-        flatArray.push(array[i])
-    }
+//     }else{
+//         flatArray.push(array[i])
+//     }
     
-  }
-  return flatArray;
- }
+//   }
+//   return flatArray;
+//  }
 
- console.log(flatAnArray(array))
+//  console.log(flatAnArray(array))
 
 
- function findDistinctElementInArray(...array){
-  const flatArr = flatAnArray(array);
-  let obj={};
-  const distinctElement=[];
+//  function findDistinctElementInArray(...array){
+//   const flatArr = flatAnArray(array);
+//   let obj={};
+//   const distinctElement=[];
    
-  for (const element of flatArr) {
- if(obj[element]) {
-       obj[element]+=1
-     }
-     else {
-      obj[element]=1
-     }
+//   for (const element of flatArr) {
+//  if(obj[element]) {
+//        obj[element]+=1
+//      }
+//      else {
+//       obj[element]=1
+//      }
  
  
-  }
+//   }
 
 
-  for (const key in obj) {
-    if(obj[key]===1) {
-       distinctElement.push(parseInt(key))
+//   for (const key in obj) {
+//     if(obj[key]===1) {
+//        distinctElement.push(parseInt(key))
+//     }
+//    }
+   
+
+//    return distinctElement
+
+//  }
+// console.log(findDistinctElementInArray([1,2,3,4,5,6],[3,4,5,2,1],[1,9]))
+
+
+const array = [1,20];
+
+// output -->[11];
+
+function findRepeat(array){
+  const rangeValue = array[array.length-1];
+   
+  let range =[];
+  let countObj={};
+  //  {'1':1}
+    for (let i = array[0]; i <= array[1]; i++) {
+       range.push({i:i.toString().split("")})
+      //  const dat
+      // '1'
+        
+      // const  new =
+       
     }
-   }
-   
+    console.log(range,"ran")
 
-// console.log(distinctElement,"obbbbb")
-  return distinctElement
+}
 
- }
-console.log(findDistinctElementInArray([1,2,3,4,5,6],[3,4,5,2,1],[1,9]))
+findRepeat(array)
