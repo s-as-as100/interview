@@ -27,14 +27,15 @@
 // // FizzBuzz Problem
 
 // // Print numbers from 1 to 100. For multiples of 3, print "Fizz"; for multiples of 5, print "Buzz". For multiples of both, print "FizzBuzz".
-// // Sum of an Array
 
+// // Sum of an Array
 // // Write a function to calculate the sum of all elements in an array.
 // // Input: [1, 2, 3] → Output: 6
-// // Find the Index of a Target Element
 
+// // Find the Index of a Target Element
 // // Return the index of a target element in an array.
 // // Input: [1, 2, 3], 3 → Output: 2
+
 // // Intermediate Level
 // // Two Sum Problem
 
@@ -68,6 +69,7 @@
 
 // // Rotate an array to the right by k steps.
 // // Input: [1, 2, 3, 4, 5], 2 → Output: [4, 5, 1, 2, 3]
+
 // // Advanced Level
 // // Find Missing Number in a Sequence
 

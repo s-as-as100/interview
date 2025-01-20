@@ -138,3 +138,91 @@
 // console.log(totalPricePhonePurchase(phone_amount))
 
  
+
+// // FizzBuzz Problem
+// // Print numbers from 1 to 100. For multiples of 3, print "Fizz"; for multiples of 5, print "Buzz". For multiples of both, print "FizzBuzz".
+ 
+
+// function  printFizzBuzz(){
+
+//   //  1 to 100;
+//   //  3,6,9--> fizz;
+//   //  5,10,15-->buzz
+//   //  15, 30,45 -->fizzBuzz
+  
+//    for (let i = 1; i <= 100; i++) {
+
+//     if(i%15===0) {
+//      console.log("fizzBuzz")
+//     }
+//     else if(i%3===0){
+//       console.log("fizz")
+//     }
+
+//     else if(i%5===0){
+//       console.log("buzz")
+//     }
+//     else {
+//       console.log(i)
+//     }
+//    }
+
+
+// }
+
+
+// printFizzBuzz()
+
+
+// // Sum of an Array
+// // Write a function to calculate the sum of all elements in an array.
+// // Input: [1, 2, 3] → Output: 6
+
+
+// function sumOfAllElements(nums){
+   
+//   let sum=0;
+ 
+//   for(let i =0; i<nums.length;i++) {
+
+//     sum+=nums[i]
+//    }
+
+//   return sum;
+       
+
+// }
+
+// console.log(sumOfAllElements([1,2,4,3,10,2]))
+
+
+// function usingReduce(nums) {
+
+//  return nums.reduce((acc,currentVal)=> acc+currentVal,0)
+
+// }
+
+// console.log(usingReduce([1,2,3,4]))
+
+
+// // Find the Index of a Target Element
+// // Return the index of a target element in an array.
+// // Input: [1, 2, 3], 3 → Output: 2
+
+
+// function getIndexValue(array) {
+//   let target = 8;
+
+//   for (let i = 0; i < array.length; i++) {
+     
+//     if(array[i] ===target) {
+//       return i
+//     }
+     
+     
+//   }
+//   return -1
+
+// }
+
+// console.log(getIndexValue([1, 2, 3,5,7,8,9]))
