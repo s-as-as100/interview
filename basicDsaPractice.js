@@ -246,34 +246,48 @@
 // // Input: "I love programming" → Output: "programming"
 // // Find Unique Elements in an Array
 
-function findLongestWordInString(str) {
-  let arrayOfString = str.split(" ");
- let longestWord ="";
-  for (let i = 0; i < arrayOfString.length; i++) {
+// function findLongestWordInString(str) {
+//   let arrayOfString = str.split(" ");
+//   let longestWord = "";
 
-    if(arrayOfString[i].length>longestWord.length) {
-      // 1>0
-      longestWord = arrayOfString[i];
-      // I
-      
-      // 4>1
+//   for (let i = 0; i < arrayOfString.length; i++) {
+//     if (arrayOfString[i].length > longestWord.length) {
+//       longestWord = arrayOfString[i];
+//     }
+//   }
+  
+//   return longestWord;
+// }
 
-    }
-
-     
-  }
-
-  return longestWord
-}
-console.log(findLongestWordInString("I love programming"))
-
-// i1, i 
-// i2,i
-// love j
+// console.log(findLongestWordInString("I love pro"));
 
 
-//i i2
-// programmming j
+// // Find Unique Elements in an Array
+
+// // Remove duplicates from an array and return only unique values.
+// // Input: [1, 2, 2, 3] → Output: [1, 2, 3]
 
 
-// i1 loop love 
+// function uniqueValueInArray(array) {
+
+//   let uniqueArray=[];
+
+//   for (let i = 0; i < array.length; i++) {
+//      if(!uniqueArray.includes(array[i])) {
+//       uniqueArray.push(array[i])
+//     }
+//     }
+
+
+//   return uniqueArray;
+
+ 
+// }
+
+// console.log(uniqueValueInArray([1, 2, 2, 3]));
+
+
+ // Flatten a Nested Array
+
+// // Flatten a multi-dimensional array into a one-dimensional array.
+// // Input: [1, [2, [3, 4]]] → Output: [1, 2, 3, 4];
