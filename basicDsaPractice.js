@@ -291,3 +291,26 @@
 
 // // Flatten a multi-dimensional array into a one-dimensional array.
 // // Input: [1, [2, [3, 4]]] → Output: [1, 2, 3, 4];
+
+function flatAnArray(array) {
+    // console.log(array)
+    let flatArray=[];
+
+    for (let i = 0; i < array.length; i++) {
+
+        if(Array.isArray(array[i])) {
+            //    flatAnArray()
+            // console.log("aaa")
+ 
+           flatArray= flatArray.concat(flatAnArray(array[i]))
+        }
+        else{
+            flatArray.push(array[i])
+        }
+         
+    }
+    return flatArray
+
+}
+
+console.log(flatAnArray([1, [2, [3, 4]]]))
