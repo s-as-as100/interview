@@ -255,18 +255,16 @@
 //       longestWord = arrayOfString[i];
 //     }
 //   }
-  
+
 //   return longestWord;
 // }
 
 // console.log(findLongestWordInString("I love pro"));
 
-
 // // Find Unique Elements in an Array
 
 // // Remove duplicates from an array and return only unique values.
 // // Input: [1, 2, 2, 3] → Output: [1, 2, 3]
-
 
 // function uniqueValueInArray(array) {
 
@@ -278,39 +276,77 @@
 //     }
 //     }
 
-
 //   return uniqueArray;
 
- 
 // }
 
 // console.log(uniqueValueInArray([1, 2, 2, 3]));
 
-
- // Flatten a Nested Array
+// Flatten a Nested Array
 
 // // Flatten a multi-dimensional array into a one-dimensional array.
 // // Input: [1, [2, [3, 4]]] → Output: [1, 2, 3, 4];
 
-function flatAnArray(array) {
-    // console.log(array)
-    let flatArray=[];
+// function flatAnArray(array) {
+//     // console.log(array)
+//     let flatArray=[];
 
-    for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
 
-        if(Array.isArray(array[i])) {
-            //    flatAnArray()
-            // console.log("aaa")
- 
-           flatArray= flatArray.concat(flatAnArray(array[i]))
-        }
-        else{
-            flatArray.push(array[i])
-        }
-         
-    }
-    return flatArray
+//         if(Array.isArray(array[i])) {
+//             //    flatAnArray()
+//             // console.log("aaa")
 
+//            flatArray= flatArray.concat(flatAnArray(array[i]))
+//         }
+//         else{
+//             flatArray.push(array[i])
+//         }
+
+//     }
+//     return flatArray
+
+// }
+
+// console.log(flatAnArray([1, [2, [3, 4]]]));
+
+// // Sort an Array
+// // Write a function to sort an array of numbers in ascending order.
+// // Input: [3, 1, 4, 1, 5] → Output: [1, 1, 3, 4, 5]
+
+function sortAnArray(array) {
+  // console.log(array)
+  // return array.sort((a,b)=>a-b)
+
+  let ascendingArray = [];
+  for (let i = 0; i < array.length; i++) {
+      if(!array[i]<array[i+1]){
+        // 3<1
+         ascendingArray.push(array[i+1])
+      }
+  }
+
+  console.log(ascendingArray,"ddd")
 }
 
-console.log(flatAnArray([1, [2, [3, 4]]]))
+console.log(sortAnArray([3, 1, 4, 1, 5]));
+
+
+function sortAnArray(array) {
+  let n = array.length;
+  console.log(n,"nnnnn")
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+
+      if (array[j] > array[j + 1]) {
+        // Swap elements if they're in the wrong order
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  }
+  return array;
+}
+
+console.log(sortAnArray([3, 1, 4, 1, 5]));  // Output: [1, 1, 3, 4, 5]
