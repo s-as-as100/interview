@@ -354,3 +354,34 @@
 // }
 
 // console.log(sortAnArray([3, 1, 4, 1, 5]));  // Output: [1, 1, 3, 4, 5]
+
+
+
+        
+function stringToObject(str, finalValue) {
+    let stringIntoArray = str.split(".");
+    console.log(stringIntoArray)
+    let result ={};
+    let current = result;
+
+ 
+     for(let i=0; i<stringIntoArray.length;i++) {
+
+        if( i === stringIntoArray.length - 1) {
+            current[stringIntoArray[i]] = finalValue
+         }
+         else {
+            current[stringIntoArray[i]]={};
+            current =current[stringIntoArray[i]]
+         }
+
+    }
+
+    return result
+} 
+
+// Test the function
+const output = stringToObject("a.b.c", "someValue");
+console.log(output); // Output: {a: {b: {c: "someValue"}}}
+
+        
