@@ -56,8 +56,7 @@
 // 6. What are the differences let, var and const ? (Most asked)
 
 // let , const  --> blocked scope, let reassigned value and const not reassigned, hoisted but not initiuzed tdz
-// var --> global scope or functional scope, fully hoisted 
-
+// var --> global scope or functional scope, fully hoisted
 
 // function y() {
 //   var x = 10;
@@ -66,12 +65,12 @@
 // y();
 
 // 8. What are limitations of arrow functions in javascript ?
-// Arrow function are introduced in ES6 and it is simple and shortway to write the fucntion 
-// arrow function doesn't have own this , its access form its surrounding 
+// Arrow function are introduced in ES6 and it is simple and shortway to write the fucntion
+// arrow function doesn't have own this , its access form its surrounding
 
 // 9. Whats the spread operator in javascript ?
 
-//use cases 
+//use cases
 
 // let x =[1,2,3];
 // let y=[4,5,6];
@@ -90,17 +89,171 @@
 
 // 10. What is rest operator in javascript ?
 
+// rest operatore condense all element into array or object
 
-// rest operatore condense all element into array or object 
-
-// we can use rest operator when the function does not know how many parameter recieved or you want 
+// we can use rest operator when the function does not know how many parameter recieved or you want
 // to capture them as an array
-
-
 
 // function restOperator(...args){
 //  console.log(args)
 // }
-
-
 // restOperator(1,2,3,4)
+
+// 1. What is the output of 3+2+"7" ?  ->  57
+
+// 2. What is the output of below logic ?
+
+// const a = 1<2<3; true
+// const b = 1>2>3; false
+
+// 3. Guess the ouput ?
+
+// const p = { k: 1, l: 2 };
+// const q = { k: 1, l: 2 };
+// let isEqual = p==q;
+// let isStartEqual = p===q;
+// console.log(isEqual,isStartEqual)
+
+// let a = 'jscafe'
+// a[0] = 'c'
+// console.log(a)
+
+// var x=10;
+// function foo(){
+// var x = 5;
+// console.log(x)
+// }
+// foo();
+// console.log(x)
+
+// console.log("Start");
+// setTimeout(() => {
+//  console.log("Timeout");
+// });
+// Promise.resolve().then(() => console.log("Promise"));
+// console.log("End");
+
+// start
+// end
+// promise
+// timeout
+
+// function x(){
+//  let a = 10;
+//  function d(){
+//  console.log(a);
+//  }
+//  a = 500;
+//  return d;
+// }
+// var z = x();
+// z();
+
+// getData1()  // getData11
+// getData();  // reference error
+
+// function getData1(){
+//  console.log("getData11")
+// }
+
+// var getData = () => {
+//  console.log("Hello")
+// }
+
+// function func() {
+//  try {
+//  console.log(1)
+//  return
+//  } catch (e) {
+//  console.log(2)
+//  } finally {
+//  console.log(3)
+//  }
+//  console.log(4)
+// }
+
+// func()
+
+// const nums = [1,2,3,4,5,6,7];
+// nums.forEach((n) => {
+//  if(n%2 === 0) {
+//  break;
+//  }
+//  console.log(n);
+// });
+
+// let a = true;
+// setTimeout(() => {
+//  a = false;
+// }, 2000)
+
+// while(a) {
+//  console.log(' -- inside whilee -- ');
+// }
+
+// setTimeout(() => console.log(1), 0);
+// console.log(2);
+//  new Promise(res => {
+//  console.log(3)
+//  res();
+// }).then(() => console.log(4));
+// console.log(5);
+
+// // 2,3,4,1
+
+// // async function foo() {
+// //  console.log("A");
+// //  await Promise.resolve();
+// //  console.log("B");
+// //  await new Promise(resolve => setTimeout(resolve, 0));
+// //  console.log("C");
+// // }
+// // console.log("D");
+// // foo();
+// // console.log("E")
+
+// // D, A, E,B,C
+
+// // . Write a program to remove duplicates from an array ?
+
+// const findLongestWord = (sentence) => {
+
+// let longestword="";
+
+// const data = sentence.split(" ");
+
+// for(let i =0 ; i<data.length; i++) {
+//       if(longestword.length<data[i].length){
+//         longestword= data[i]
+
+//       }
+
+// }
+
+// return longestword;
+
+// };
+
+// console.log(findLongestWord("Hi Iam Saikrfjoeroigheroigherishna Iam a UI Developerssjvberiugbeiuveruivreiusss"))
+
+// const mergeSortedArrays = (arr1, arr2) => {
+//   let i = 0, j = 0;
+//   let result = [];
+
+//   while (i < arr1.length && j < arr2.length) {
+
+//     if (arr1[i] < arr2[j]) {
+//         // 1<2 --> [1] -- i =0 ,j=0
+//         // 3<2-->[1,2]
+//         // i=1 ,j=1
+//       result.push(arr1[i]);
+//        i++;
+//     } else {
+//       result.push(arr2[j]);
+//       j++;
+//     }
+//   }
+//   console.log(result,"rrrrr")
+// //   return result.concat(arr1.slice(i)).concat(arr2.slice(j));
+// };
+// console.log(mergeSortedArrays([1, 3, 4, 5], [2, 6, 8, 9])); 
