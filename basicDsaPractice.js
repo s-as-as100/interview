@@ -358,30 +358,54 @@
 
 
         
-function stringToObject(str, finalValue) {
-    let stringIntoArray = str.split(".");
-    console.log(stringIntoArray)
-    let result ={};
-    let current = result;
+// function stringToObject(str, finalValue) {
+//     let stringIntoArray = str.split(".");
+//     console.log(stringIntoArray)
+//     let result ={};
+//     let current = result;
 
  
-     for(let i=0; i<stringIntoArray.length;i++) {
+//      for(let i=0; i<stringIntoArray.length;i++) {
 
-        if( i === stringIntoArray.length - 1) {
-            current[stringIntoArray[i]] = finalValue
-         }
-         else {
-            current[stringIntoArray[i]]={};
-            current =current[stringIntoArray[i]]
-         }
+//         if( i === stringIntoArray.length - 1) {
+//             current[stringIntoArray[i]] = finalValue
+//          }
+//          else {
+//             current[stringIntoArray[i]]={};
+//             current =current[stringIntoArray[i]]
+//          }
 
+//     }
+
+//     return result
+// } 
+
+// // Test the function
+// const output = stringToObject("a.b.c", "someValue");
+// console.log(output); // Output: {a: {b: {c: "someValue"}}}
+
+
+
+        function isSameFrequency(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return "Please provide arrays of the same length.";
     }
 
-    return result
-} 
+    // Square each element of arr1 and arr2
+    let squareArray1 = arr1.map((el) => el * el).sort((a, b) => a - b);
+    let squareArray2 = arr2.map((el) => el * el).sort((a, b) => a - b);
 
-// Test the function
-const output = stringToObject("a.b.c", "someValue");
-console.log(output); // Output: {a: {b: {c: "someValue"}}}
+    // Compare the squared and sorted arrays element by element
+    for (let i = 0; i < arr1.length; i++) {
+        if (squareArray1[i] !== squareArray2[i]) {
+            return false;
+        }
+    }
 
-        
+    return true;
+}
+
+console.log(isSameFrequency([1, 16, 25], [5, 4, 1]));  // true
+console.log(isSameFrequency([1, 2, 3], [4, 1, 9]));    // true
+console.log(isSameFrequency([1, 2, 3], [1, 9]));       // false
+console.log(isSameFrequency([1, 2, 1], [4, 4, 1]));    // false

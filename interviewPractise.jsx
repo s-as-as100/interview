@@ -309,3 +309,22 @@
 // // console.log("flattenArray:", flattenArray(nestedArray))
 // console.log("Largest element:", findLargestElement(nestedArray));
         
+
+
+function productOfNextTwoItems(array) {
+    let result = [];
+  
+    for (let i = 0; i < array.length; i++) {
+         let firstItem = array[(i + 1) % array.length];
+         
+         
+         console.log(array[(i + 1) % array.length])
+        let secondItem = array[(i + 2) % array.length];
+        
+         result.push(firstItem * secondItem);
+    }
+
+    return result;
+}
+
+console.log(productOfNextTwoItems([3, 4, 5])); // Output: [20, 15, 12]
