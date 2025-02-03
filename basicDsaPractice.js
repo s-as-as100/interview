@@ -409,3 +409,25 @@ console.log(isSameFrequency([1, 16, 25], [5, 4, 1]));  // true
 console.log(isSameFrequency([1, 2, 3], [4, 1, 9]));    // true
 console.log(isSameFrequency([1, 2, 3], [1, 9]));       // false
 console.log(isSameFrequency([1, 2, 1], [4, 4, 1]));    // false
+
+
+
+
+// const sumOfThirds = (arr) => {
+ 
+//  let sum = 0;
+
+//  for(let i=0; i<arr.length;i++){
+
+//     if(i===0||i%3===0){
+//         sum+=arr[i]
+//     }
+
+//  }
+//  return sum
+ 
+
+// };           
+
+// console.log(sumOfThirds([10, 20, 30, 40, 50, 60, 70, 80, 90]))                                    
+        

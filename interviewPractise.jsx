@@ -256,10 +256,7 @@
 // //   console.log(result,"rrrrr")
 // // //   return result.concat(arr1.slice(i)).concat(arr2.slice(j));
 // // };
-// // console.log(mergeSortedArrays([1, 3, 4, 5], [2, 6, 8, 9])); 
-
-
-
+// // console.log(mergeSortedArrays([1, 3, 4, 5], [2, 6, 8, 9]));
 
 // function flattenArray(arr) {
 //   let result=[];
@@ -276,19 +273,15 @@
 
 //   }
 //   return result;
-    
 
 // }
-
-
-
 
 // function findLargestElement(arr) {
 
 //     const flatArray = flattenArray(arr);
 //     let largestValue = flatArray[0]
 //     for(let i=1; i<flatArray.length; i++) {
-          
+
 //           if(largestValue<flatArray[i]){
 //             largestValue = flatArray[i]
 //             //3<4 -->larg =4;
@@ -297,34 +290,146 @@
 //             // 709<9=8
 //             }
 
-
 //     }
 //     return largestValue;
 //  }
-
 
 // // Example usage:
 // const nestedArray = [[3, 4, 58], [709, 8, 9, [10, 11]], [111, 21111]];
 
 // // console.log("flattenArray:", flattenArray(nestedArray))
 // console.log("Largest element:", findLargestElement(nestedArray));
-        
+
+// function productOfNextTwoItems(array) {
+//     let result = [];
+
+//     for (let i = 0; i < array.length; i++) {
+//          let firstItem = array[(i + 1) % array.length];
+
+//          console.log(array[(i + 1) % array.length])
+//         let secondItem = array[(i + 2) % array.length];
+
+//          result.push(firstItem * secondItem);
+//     }
+
+//     return result;
+// }
+
+// console.log(productOfNextTwoItems([3, 4, 5])); // Output: [20, 15, 12]
+
+// What is the difference between map() and forEach()
+
+// map method transform the element of an array and forEach loop thorugh to an element
+// map return a new array with transformed value and forEach not return a new value
+
+// 17. What is the difference between for-in and for-of ?
+
+// for in iterate over the object of keys
+
+// let x ={ a:2,b:3};
+
+// // for (const key in x) {
+
+// //     console.log(key)
+
+// // }
+
+// // for of interate oveer the values of o objet
+
+// for (const val of Object.values(x)) {
+
+//     console.log(val)
+
+// }
+
+// 18. What is difference between find vs findIndex ?
+
+// It will return the first element of array that passes specified condition.
+
+// let data = [
+
+//     {
+//         id:1,
+//         name:"mohd"
+//     },
+//     {
+//         id:2,
+//         name:"arif"
+//     }
+// ]
+
+// const result = data.find((x)=>x.id==2);
+// console.log(result);
+
+// // findIndex : it will return the first index of  first element of array that passed specified condition
+
+// const result1= data.findIndex((x)=>x.id==2);
+// console.log(result1)
+
+// 9. What is the difference between Pure and Impure functions?
+
+//  pure function is return always same output ;
+// its not modify
+
+// function pure(name) {
+//   return `${name}`;
+// }
+// console.log(pure("hello"));
+
+// let surname = "arif";
+// function impureFunc(name) {
+//   return `${name} ${surname}`;
+// }
+
+// console.log(impureFunc("mohd"));
 
 
-function productOfNextTwoItems(array) {
-    let result = [];
-  
-    for (let i = 0; i < array.length; i++) {
-         let firstItem = array[(i + 1) % array.length];
-         
-         
-         console.log(array[(i + 1) % array.length])
-        let secondItem = array[(i + 2) % array.length];
-        
-         result.push(firstItem * secondItem);
-    }
+// . What are the differences between call(), apply() and bind() ? (Frequently asked)
 
-    return result;
+// call method is used to function immediately pass the value as argument 
+
+let name1 ={
+    name:"mohd arif",
+    designation:"frontend engineer"
 }
 
-console.log(productOfNextTwoItems([3, 4, 5])); // Output: [20, 15, 12]
+let name2 ={
+    name:"khan",
+    designation:"backend enginner"
+}
+
+const method = function callMethod(param) {
+    console.log(`${this.name} and ${this.designation} ${param}`)
+}
+
+// callFunction.call(name1,"salary")
+
+
+
+// apply method is invoked the function immediatery  pass the value as argument as an array 
+
+
+// const method =function applyMethod(param) {
+
+//     console.log(`${this.name} and ${this.designation} ${param}`)
+// }
+
+// applyFunction.apply(name2,["salary"])
+
+
+// Bind method return a new function wiht the given value and argument and invoked later
+
+// let bindPrintName = method.bind(name1,"hero");
+
+// bindPrintName()
+
+// 22. Whats the difference between Object.keys,values and entries
+
+let object ={
+    name:"md",
+    salary:23222
+}
+
+console.log(Object.keys(object))  // its return array of keys
+console.log(Object.values(object)) // its retunr array of values
+console.log(Object.entries(object)) // return array of key value pair
