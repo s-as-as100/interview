@@ -425,11 +425,94 @@ const method = function callMethod(param) {
 
 // 22. Whats the difference between Object.keys,values and entries
 
-let object ={
-    name:"md",
-    salary:23222
-}
+// let object ={
+//     name:"md",
+//     salary:23222
+// }
 
-console.log(Object.keys(object))  // its return array of keys
-console.log(Object.values(object)) // its retunr array of values
-console.log(Object.entries(object)) // return array of key value pair
+// console.log(Object.keys(object))  // its return array of keys
+// console.log(Object.values(object)) // its retunr array of values
+// console.log(Object.entries(object)) // return array of key value pair
+
+
+// 24. What is a polyfill in javascript ?
+
+// A polyfill is a piece of code provde modern functionality which does not support for older browser.
+
+
+// 1. forEach
+
+
+// const data =[1,2,3,1];
+// // const result = data.forEach((el)=>console.log(el));
+
+// //2. polyfill
+
+// // const forEachCallBackFn = (el)=>{
+// //     console.log(el)
+// // }
+
+
+// // Array.prototype.myForEachPolyfill= function(callBackFn) {
+  
+    
+// //     for (let i = 0; i < this.length; i++) {
+// //          callBackFn(this[i])
+// //     }
+ 
+// // }
+
+// // data.myForEachPolyfill(forEachCallBackFn);
+
+
+// // const reduce = data.reduce((acc,val) =>console.log(val,"v"),0);
+// // console.log(reduce)
+
+
+
+// function reduceCallBack(acc,val){
+
+//     return acc+val
+//  }
+
+// Array.prototype.myReducePolyfill = function(cb,initialValue) {
+//      let acc = initialValue !== undefined ? initialValue : this[0];
+    
+//      let startIndex = initialValue === undefined ? 1 : 0;
+
+//     for (let i = startIndex; i < this.length; i++) {
+//           acc=cb(acc,this[i],i, this)
+//     }
+
+//     return acc
+//  }
+
+  
+
+// const result = data.myReducePolyfill(reduceCallBack, 0);  // 0 is the initial value
+
+// console.log(result);
+
+
+
+// 3.  map polyfill
+
+
+// const data =[2,4,5,1];
+ 
+
+// function mapPolyfillCallBack(el) {
+//       return el*3
+//  }
+ 
+
+// Array.prototype.myMapPolyfill = function (cb) {
+//  let result = []
+//   for (let i = 0; i < this.length; i++) {
+//          result.push(cb(this[i],i,this))
+//  }
+//   return result
+// }
+
+// const result = data.myMapPolyfill(mapPolyfillCallBack);
+// console.log(result,"Result")
