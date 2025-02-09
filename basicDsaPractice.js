@@ -331,13 +331,12 @@
 
 // console.log(sortAnArray([3, 1, 4, 1, 5]));
 
-
 // function sortAnArray(array) {
 //   let n = array.length;
 //   console.log(n,"nnnnn")
 //   for (let i = 0; i < n; i++) {
 //     for (let j = 0; j < n - i - 1; j++) {
-//    //5-0-1 ->4; 
+//    //5-0-1 ->4;
 //       if (array[j] > array[j + 1]) {
 //         3>1
 //         // Swap elements if they're in the wrong order
@@ -355,16 +354,12 @@
 
 // console.log(sortAnArray([3, 1, 4, 1, 5]));  // Output: [1, 1, 3, 4, 5]
 
-
-
-        
 // function stringToObject(str, finalValue) {
 //     let stringIntoArray = str.split(".");
 //     console.log(stringIntoArray)
 //     let result ={};
 //     let current = result;
 
- 
 //      for(let i=0; i<stringIntoArray.length;i++) {
 
 //         if( i === stringIntoArray.length - 1) {
@@ -378,43 +373,38 @@
 //     }
 
 //     return result
-// } 
+// }
 
 // // Test the function
 // const output = stringToObject("a.b.c", "someValue");
 // console.log(output); // Output: {a: {b: {c: "someValue"}}}
 
+//    function isSameFrequency(arr1, arr2) {
+//     if (arr1.length !== arr2.length) {
+//         return "Please provide arrays of the same length.";
+//     }
 
+//     // Square each element of arr1 and arr2
+//     let squareArray1 = arr1.map((el) => el * el).sort((a, b) => a - b);
+//     let squareArray2 = arr2.map((el) => el * el).sort((a, b) => a - b);
 
-        function isSameFrequency(arr1, arr2) {
-    if (arr1.length !== arr2.length) {
-        return "Please provide arrays of the same length.";
-    }
+//     // Compare the squared and sorted arrays element by element
+//     for (let i = 0; i < arr1.length; i++) {
+//         if (squareArray1[i] !== squareArray2[i]) {
+//             return false;
+//         }
+//     }
 
-    // Square each element of arr1 and arr2
-    let squareArray1 = arr1.map((el) => el * el).sort((a, b) => a - b);
-    let squareArray2 = arr2.map((el) => el * el).sort((a, b) => a - b);
+//     return true;
+// }
 
-    // Compare the squared and sorted arrays element by element
-    for (let i = 0; i < arr1.length; i++) {
-        if (squareArray1[i] !== squareArray2[i]) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-console.log(isSameFrequency([1, 16, 25], [5, 4, 1]));  // true
-console.log(isSameFrequency([1, 2, 3], [4, 1, 9]));    // true
-console.log(isSameFrequency([1, 2, 3], [1, 9]));       // false
-console.log(isSameFrequency([1, 2, 1], [4, 4, 1]));    // false
-
-
-
+// console.log(isSameFrequency([1, 16, 25], [5, 4, 1]));  // true
+// console.log(isSameFrequency([1, 2, 3], [4, 1, 9]));    // true
+// console.log(isSameFrequency([1, 2, 3], [1, 9]));       // false
+// console.log(isSameFrequency([1, 2, 1], [4, 4, 1]));    // false
 
 // const sumOfThirds = (arr) => {
- 
+
 //  let sum = 0;
 
 //  for(let i=0; i<arr.length;i++){
@@ -425,9 +415,90 @@ console.log(isSameFrequency([1, 2, 1], [4, 4, 1]));    // false
 
 //  }
 //  return sum
- 
 
-// };           
+// };
 
-// console.log(sumOfThirds([10, 20, 30, 40, 50, 60, 70, 80, 90]))                                    
-        
+// console.log(sumOfThirds([10, 20, 30, 40, 50, 60, 70, 80, 90]))
+
+// Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
+
+// Example [1,2,3] --> false , [1,2,3,4,4,5] --> true ;
+
+// const testCase1 = [1,2,3];
+
+// const testCase2=[1,2,3,4,4,5];
+
+// function  hasDublicateCheck(array){
+//     let checkvalue =[];
+
+//     for (let i = 0; i < array.length; i++) {
+
+//         if(checkvalue.includes(array[i])) {
+//             return true
+//         }
+//         else {
+//         checkvalue.push(array[i])
+
+//         }
+
+//     }
+
+//     return false
+//      // console.log(array,"arrrr")
+
+// }
+
+// console.log(hasDublicateCheck(testCase2))
+
+// Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
+
+// An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+
+let s = "aman";
+let t = "mana";
+// let r=s.includes(t[3]);
+// console.log(r)
+// return true
+
+// let s= "hero";
+// let t="zero";
+
+//retirn false
+
+// let s ="nferjf";
+// let t ="ejn"
+
+// function checkAnagram(string1,string2) {
+
+//     if(string1.length!=string2.length) {
+//         return "not an anagram each other"
+//     }
+
+//     let arrString1 = string1.split("").sort().join("")
+//     let arrString2 = string2.split("").sort().join("");
+//     let result = arrString1 ===arrString2 ? true:false;
+//     return result
+
+// }
+
+// console.log(checkAnagram(s,t))
+
+// Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.
+// You may assume that every input has exactly one pair of indices i and j that satisfy the condition.
+// Return the answer with the smaller index first.
+
+// let array = [1, 2, 3];
+// let target = 5;
+
+// function indexReturnOfSum(array, target) {
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[i] + array[j] === target) {
+//         return [i, j];
+//       }
+//     }
+//   }
+//   return [];
+// }
+
+// console.log(indexReturnOfSum(array, target));

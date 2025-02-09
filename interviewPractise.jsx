@@ -388,19 +388,19 @@
 
 // call method is used to function immediately pass the value as argument 
 
-let name1 ={
-    name:"mohd arif",
-    designation:"frontend engineer"
-}
+// let name1 ={
+//     name:"mohd arif",
+//     designation:"frontend engineer"
+// }
 
-let name2 ={
-    name:"khan",
-    designation:"backend enginner"
-}
+// let name2 ={
+//     name:"khan",
+//     designation:"backend enginner"
+// }
 
-const method = function callMethod(param) {
-    console.log(`${this.name} and ${this.designation} ${param}`)
-}
+// const method = function callMethod(param) {
+//     console.log(`${this.name} and ${this.designation} ${param}`)
+// }
 
 // callFunction.call(name1,"salary")
 
