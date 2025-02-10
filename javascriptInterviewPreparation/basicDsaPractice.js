@@ -454,8 +454,8 @@
 
 // An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
 
-let s = "aman";
-let t = "mana";
+// let s = "aman";
+// let t = "mana";
 // let r=s.includes(t[3]);
 // console.log(r)
 // return true
@@ -502,3 +502,33 @@ let t = "mana";
 // }
 
 // console.log(indexReturnOfSum(array, target));
+
+// const strs = ["act", "pots", "tops", "cat", "stop", "hat", "aman"];
+// let an1Map = new Map()
+
+// const result = an1Map.set(strs[0], []);
+// const hasResult = an1Map.has(strs[0]);
+
+// console.log(hasResult,"::Has result")
+// console.log(result,"Reeee")
+
+// function groupOfAnagram(strs) {
+//   let reverSort = [];
+//   let anagraMap = new Map();
+
+//   for (let i = 0; i < strs.length; i++) {
+//     reverSort.push(strs[i].split("").sort().join(""));
+//   }
+
+//   for (const str of reverSort) {
+//     if (!anagraMap.has(str)) {
+//       anagraMap.set(str, []);
+//     }
+//      anagraMap.get(str).push(str);
+//   }
+
+//   return Array.from(anagraMap.values());
+
+// }
+
+// console.log(groupOfAnagram(strs));
