@@ -56,6 +56,32 @@ const TheoryQuestions: React.FC = () => {
     },
 
     {
+      question: "10. What is props drilling?",
+      answer:
+        "Props drilling is the process of sending the data from one component to the component thats needs the data from several interconnected components",
+    },
+    {
+      question:
+        "11. What are the disadvantages of props drilling and How we can avoid props drilling ?",
+      answer:
+        "Code complexity:, Reduced maintainability:, Increased risk of errors:, Performance overhead:",
+    },
+    {
+      question: "12. What is useReducer hook ?",
+      answer:
+        "it is an alternative hook of useState which manage complex multiple state.",
+    },
+    {
+      question: "13. What is useMemo ?",
+      answer:
+        "useMemo is useful for performance optimization in react and It is used to cache the result of a function between re-renders. and example of data visualization",
+    },
+    {
+      question: "10. What is props drilling ?",
+      answer:
+        "Props drilling is the process of sending the data from one component to the component thats needs the data from several interconnected components",
+    },
+    {
       question: "10. What is props drilling ?",
       answer:
         "Props drilling is the process of sending the data from one component to the component thats needs the data from several interconnected components",
