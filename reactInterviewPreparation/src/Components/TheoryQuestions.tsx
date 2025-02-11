@@ -82,9 +82,9 @@ const TheoryQuestions: React.FC = () => {
         "Props drilling is the process of sending the data from one component to the component thats needs the data from several interconnected components",
     },
     {
-      question: "10. What is props drilling ?",
-      answer:
-        "Props drilling is the process of sending the data from one component to the component thats needs the data from several interconnected components",
+      question: "15How do you optimize your react application ?",
+
+      answer: "code spilliting , assets manifest, CDN integration",
     },
   ];
 

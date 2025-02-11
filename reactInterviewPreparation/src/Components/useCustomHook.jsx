@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const useCustomHook = () => {
     const [loading,setLoading] = useState(false);
@@ -10,14 +10,23 @@ const useCustomHook = () => {
 
         try {
             const data = await fetch("");
-            const result = data.json()
+            const result = data.json();
+            setData(result);
+            // setLoading()
             
         } catch (error) {
-            
+            setError(error)
         }
 
     }
-  
+
+    useEffect(()=>{
+     fetchUserData()
+    },[])
+
+  return {
+    data,error,loading
+  }
   
 }
 
