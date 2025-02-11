@@ -77,7 +77,7 @@ const TheoryQuestions: React.FC = () => {
         "useMemo is useful for performance optimization in react and It is used to cache the result of a function between re-renders. and example of data visualization",
     },
     {
-      question: "10. What is props drilling ?",
+      question: "14. What is useCallback ?",
       answer:
         "Props drilling is the process of sending the data from one component to the component thats needs the data from several interconnected components",
     },
