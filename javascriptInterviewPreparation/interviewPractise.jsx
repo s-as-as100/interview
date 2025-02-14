@@ -383,10 +383,9 @@
 
 // console.log(impureFunc("mohd"));
 
-
 // . What are the differences between call(), apply() and bind() ? (Frequently asked)
 
-// call method is used to function immediately pass the value as argument 
+// call method is used to function immediately pass the value as argument
 
 // let name1 ={
 //     name:"mohd arif",
@@ -404,10 +403,7 @@
 
 // callFunction.call(name1,"salary")
 
-
-
-// apply method is invoked the function immediatery  pass the value as argument as an array 
-
+// apply method is invoked the function immediatery  pass the value as argument as an array
 
 // const method =function applyMethod(param) {
 
@@ -415,7 +411,6 @@
 // }
 
 // applyFunction.apply(name2,["salary"])
-
 
 // Bind method return a new function wiht the given value and argument and invoked later
 
@@ -434,14 +429,11 @@
 // console.log(Object.values(object)) // its retunr array of values
 // console.log(Object.entries(object)) // return array of key value pair
 
-
 // 24. What is a polyfill in javascript ?
 
 // A polyfill is a piece of code provde modern functionality which does not support for older browser.
 
-
 // 1. forEach
-
 
 // const data =[1,2,3,1];
 // // const result = data.forEach((el)=>console.log(el));
@@ -452,23 +444,18 @@
 // //     console.log(el)
 // // }
 
-
 // // Array.prototype.myForEachPolyfill= function(callBackFn) {
-  
-    
+
 // //     for (let i = 0; i < this.length; i++) {
 // //          callBackFn(this[i])
 // //     }
- 
+
 // // }
 
 // // data.myForEachPolyfill(forEachCallBackFn);
 
-
 // // const reduce = data.reduce((acc,val) =>console.log(val,"v"),0);
 // // console.log(reduce)
-
-
 
 // function reduceCallBack(acc,val){
 
@@ -477,7 +464,7 @@
 
 // Array.prototype.myReducePolyfill = function(cb,initialValue) {
 //      let acc = initialValue !== undefined ? initialValue : this[0];
-    
+
 //      let startIndex = initialValue === undefined ? 1 : 0;
 
 //     for (let i = startIndex; i < this.length; i++) {
@@ -487,24 +474,17 @@
 //     return acc
 //  }
 
-  
-
 // const result = data.myReducePolyfill(reduceCallBack, 0);  // 0 is the initial value
 
 // console.log(result);
 
-
-
 // 3.  map polyfill
 
-
 // const data =[2,4,5,1];
- 
 
 // function mapPolyfillCallBack(el) {
 //       return el*3
 //  }
- 
 
 // Array.prototype.myMapPolyfill = function (cb) {
 //  let result = []
@@ -516,3 +496,106 @@
 
 // const result = data.myMapPolyfill(mapPolyfillCallBack);
 // console.log(result,"Result")
+
+// function primeOrNot(num) {
+
+//     if(num===2) {
+//         return true
+//     }
+
+//     if(num%2===0) {
+//         return false
+//     }
+
+//     if(num%3===0) {
+//         return false
+//     }
+
+//     for (let i = 3; i < Math.sqrt(num); i+=2) {
+//         if(num%i ===0) {
+//             return false
+//         }
+
+//     }
+
+//     return true
+
+// }
+
+// console.log(primeOrNot(57))
+
+// find the unique object in the array
+
+let data = [
+  {
+    name: "mod",
+  },
+  {
+    name: "arif",
+  },
+  {
+    name: "anas",
+  },
+  {
+    name: "mod",
+  },
+  {
+    name: "anas",
+  },
+  {
+    name: "raif",
+  },
+];
+
+function getValuesFromArray(data) {
+  let getValues = [];
+  let uniqueData =[];
+  let result =[];
+  for (const el of data) {
+    const newData = Object.values(el);
+    getValues.push(newData[0]);
+   
+    // if()
+   }
+
+   for (let i = 0; i < getValues.length; i++) {
+    if(!uniqueData.includes(getValues[i])){
+          uniqueData.push(getValues[i])
+    }
+     
+   }
+
+   for (const val of uniqueData) {
+    result.push({name:val})
+    }
+ 
+//    getValues.map((el)=>console.log(el))
+
+//    console.log(getValues,"get")
+
+  return result;
+}
+
+console.log(getValuesFromArray(data))
+//  const newHero = ['mohd'];
+//  console.log(newHero.includes('mohd'))
+
+// output:  [
+// {
+//     name:"mod"
+// },
+// {
+//     name:"arif"
+// },
+// {
+//     name:"anas"
+// },
+// {
+//     name:"raif"
+// }
+
+// ]
+
+ 
+
+// const result = data.map((el) =>console.log(el))
