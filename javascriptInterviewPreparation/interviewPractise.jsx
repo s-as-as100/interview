@@ -526,57 +526,57 @@
 
 // find the unique object in the array
 
-let data = [
-  {
-    name: "mod",
-  },
-  {
-    name: "arif",
-  },
-  {
-    name: "anas",
-  },
-  {
-    name: "mod",
-  },
-  {
-    name: "anas",
-  },
-  {
-    name: "raif",
-  },
-];
+// let data = [
+//   {
+//     name: "mod",
+//   },
+//   {
+//     name: "arif",
+//   },
+//   {
+//     name: "anas",
+//   },
+//   {
+//     name: "mod",
+//   },
+//   {
+//     name: "anas",
+//   },
+//   {
+//     name: "raif",
+//   },
+// ];
 
-function getValuesFromArray(data) {
-  let getValues = [];
-  let uniqueData =[];
-  let result =[];
-  for (const el of data) {
-    const newData = Object.values(el);
-    getValues.push(newData[0]);
+// function getValuesFromArray(data) {
+//   let getValues = [];
+//   let uniqueData =[];
+//   let result =[];
+//   for (const el of data) {
+//     const newData = Object.values(el);
+//     getValues.push(newData[0]);
    
-    // if()
-   }
+//     // if()
+//    }
 
-   for (let i = 0; i < getValues.length; i++) {
-    if(!uniqueData.includes(getValues[i])){
-          uniqueData.push(getValues[i])
-    }
+//    for (let i = 0; i < getValues.length; i++) {
+//     if(!uniqueData.includes(getValues[i])){
+//           uniqueData.push(getValues[i])
+//     }
      
-   }
+//    }
 
-   for (const val of uniqueData) {
-    result.push({name:val})
-    }
+//    for (const val of uniqueData) {
+//     result.push({name:val})
+//     }
  
-//    getValues.map((el)=>console.log(el))
+// //    getValues.map((el)=>console.log(el))
 
-//    console.log(getValues,"get")
+// //    console.log(getValues,"get")
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(getValuesFromArray(data))
+// console.log(getValuesFromArray(data))
 //  const newHero = ['mohd'];
 //  console.log(newHero.includes('mohd'))
 
@@ -599,3 +599,27 @@ console.log(getValuesFromArray(data))
  
 
 // const result = data.map((el) =>console.log(el))
+
+
+// find mising no 1 to 10 
+const data= [1,2,3,7,5,6,9];
+
+
+const findMissingNumber =(data) =>{
+    const missingELement=[];
+    const sortData = data.sort((a,b) =>a-b);
+    console.log({sortData})
+    const min = sortData[0]; 
+    const max = sortData[sortData.length - 1]; 
+    for (let i = min; i <= max; i++) {
+     
+    if(!sortData.includes(i)){
+        missingELement.push(i)
+    }
+         
+    }
+ 
+     return missingELement
+}
+
+console.log(findMissingNumber(data))
