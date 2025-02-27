@@ -577,8 +577,8 @@
 // }
 
 // console.log(getValuesFromArray(data))
-//  const newHero = ['mohd'];
-//  console.log(newHero.includes('mohd'))
+ const newHero = ['mohd'];
+ console.log(newHero.includes('mohd'))
 
 // output:  [
 // {
@@ -598,7 +598,7 @@
 
  
 
-// const result = data.map((el) =>console.log(el))
+const result = data.map((el) =>console.log(el))
 
 
 // find mising no 1 to 10 
@@ -623,3 +623,12 @@ const findMissingNumber =(data) =>{
 }
 
 console.log(findMissingNumber(data))
+
+
+
+function checkNumber() {
+    console.log("")
+
+}
+
+checkNumber()
