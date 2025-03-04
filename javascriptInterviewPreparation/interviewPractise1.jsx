@@ -61,28 +61,70 @@ const data = [1, 2, 3, 4, 8, 10];
 
 // console.log(data.myFilterPolyfill(callBackFnOfFilter));
 
-
 // Build a promise from scratch
 
+// function createCustomPromise() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       let success = true;
 
-function createCustomPromise() {
+//       if (success) {
+//         resolve("Promise resolved successfully");
+//       } else {
+//         reject("Promise reject");
+//       }
+//     }, 2000);
+//   });
+// }
 
-    return new Promise((resolve,reject) =>{
-        setTimeout(() => {
-            let success = true;
+// createCustomPromise().then((result) => console.log(result, "Rrr"));
+// createCustomPromise().catch((error) => console.log(error));
+// createCustomPromise().finally(() => console.log("finally resolved"));
 
-            if(success) {
-                resolve("Promise resolved successfully")
-            }
-            else {
-                reject("Promise reject")
-            }
-            
-        }, 2000);
-    })
+// // Function to implement memoization
+// function fibonacci(n, memo = {}) {
+//   // Base case: return n if n is 0 or 1
+//   if (n <= 1) {
+//     return n;
+//   }
 
+//   // Check if the value is already computed and stored in memo
+//   if (memo[n]) {
+//     return memo[n];
+//   }
+
+//   // Store the result in memo object
+//   memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+//   //        4 +3
+
+//   // Return the result from memo
+//   return memo[n];
+// }
+
+// // Test the function
+// console.log(fibonacci(10)); // Output: 55
+
+// Implement currying
+
+// Currying is a functional programming technique where you transform a function that takes
+// multiple arguments into a sequence of functions, each taking a single argument.
+
+// function curryingFn(a) {
+//   return function (b) {
+//     return function (c) {
+//       return a + b + c;
+//     };
+//   };
+// }
+
+// console.log(curryingFn(2)(2)(2))
+
+function multiple(a) {
+  return function (b) {
+    return a * b;
+  };
 }
 
-createCustomPromise().then((result)=>console.log(result,"Rrr"))
-createCustomPromise().catch((error) =>console.log(error));
-createCustomPromise().finally(()=>console.log("finally resolved"))
+const multiplyBy2 = multiple(2);
+console.log(multiplyBy2(2));
+console.log(multiplyBy2(4))
