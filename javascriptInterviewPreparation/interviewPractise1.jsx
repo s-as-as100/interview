@@ -128,3 +128,14 @@ function multiple(a) {
 const multiplyBy2 = multiple(2);
 console.log(multiplyBy2(2));
 console.log(multiplyBy2(4))
+
+
+function test() {
+    
+    console.log(a)
+    var a=1;
+
+    
+}
+
+test()
