@@ -119,23 +119,42 @@ const data = [1, 2, 3, 4, 8, 10];
 
 // console.log(curryingFn(2)(2)(2))
 
-function multiple(a) {
-  return function (b) {
-    return a * b;
-  };
+// function multiple(a) {
+//   return function (b) {
+//     return a * b;
+//   };
+// }
+
+// const multiplyBy2 = multiple(2);
+// console.log(multiplyBy2(2));
+// console.log(multiplyBy2(4))
+
+
+// function test() {
+    
+//     console.log(a)
+//     var a=1;
+
+
+// }
+
+// test()
+
+
+
+// find 2nd maximum number in the array 
+
+
+const dataNew  =[1,2,3,5,6,1,8,9];
+const unique = [...new Set(dataNew)];
+console.log(unique,"uni")       
+
+function secondMaxNumber(array) {
+
+    const sortIntoDecendingOrder = array.sort((a,b) =>b-a);
+    console.log(sortIntoDecendingOrder)
+    return sortIntoDecendingOrder[1]
+
 }
 
-const multiplyBy2 = multiple(2);
-console.log(multiplyBy2(2));
-console.log(multiplyBy2(4))
-
-
-function test() {
-    
-    console.log(a)
-    var a=1;
-
-    
-}
-
-test()
+console.log(secondMaxNumber(dataNew))
