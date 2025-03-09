@@ -129,32 +129,67 @@ const data = [1, 2, 3, 4, 8, 10];
 // console.log(multiplyBy2(2));
 // console.log(multiplyBy2(4))
 
-
 // function test() {
-    
+
 //     console.log(a)
 //     var a=1;
-
 
 // }
 
 // test()
 
+// find 2nd maximum number in the array
 
+// const dataNew  =[1,2,3,5,6,1,8,9];
+// const unique = [...new Set(dataNew)];
+// console.log(unique)
+// console.log(unique,"uni")
 
-// find 2nd maximum number in the array 
+// function secondMaxNumber(array) {
 
+//     const sortIntoDecendingOrder = array.sort((a,b) =>b-a);
+//     console.log(sortIntoDecendingOrder)
+//     return sortIntoDecendingOrder[1]
 
-const dataNew  =[1,2,3,5,6,1,8,9];
-const unique = [...new Set(dataNew)];
-console.log(unique,"uni")       
+// }
 
-function secondMaxNumber(array) {
+// console.log(secondMaxNumber(dataNew))
 
-    const sortIntoDecendingOrder = array.sort((a,b) =>b-a);
-    console.log(sortIntoDecendingOrder)
-    return sortIntoDecendingOrder[1]
+// Write a function that finds the first non-repeating character in a string.
 
+// firstUniqueChar("javascript"); // Output: "j"
+// firstUniqueChar("aabbccddeeffg"); // Output: "g"
+
+// if(newObj[i]){
+//         newObj[i]+=1
+//     }
+//     else {
+//         newObj[i]=1
+//     }
+
+function objOccurenceCount(str) {
+  let obj = {};
+
+  for (const x of str) {
+    if (obj[x]) {
+      obj[x] += 1;
+    } else {
+      obj[x] = 1;
+    }
+  }
+  return obj;
 }
 
-console.log(secondMaxNumber(dataNew))
+const objResult = objOccurenceCount("aabbccddeeffg");
+
+function findFirstUniqueChar(obj) {
+ 
+  for (const key in obj) {
+    
+    if (obj[key] === 1) {
+      return key;
+    }
+  }
+}
+
+console.log(findFirstUniqueChar(objResult));
