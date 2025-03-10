@@ -193,3 +193,8 @@ function findFirstUniqueChar(obj) {
 }
 
 console.log(findFirstUniqueChar(objResult));
+
+
+function checkValid() {
+  
+}
