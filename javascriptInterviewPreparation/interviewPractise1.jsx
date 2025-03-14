@@ -233,7 +233,7 @@ console.log(firstCharacterRepeat("hello"));
 // console.log(isSubset([1, 2, 3, 4, 5], [2, 3, 4]));
 
 // function flatAnArray(array) {
- 
+
 //   let flatArray = [];
 
 //   for (let i = 0; i < array.length; i++) {
@@ -255,26 +255,39 @@ console.log(firstCharacterRepeat("hello"));
 // ])
 // )
 
-
 // Find Missing Number in an Array
 // Q: Given an array containing numbers from 1 to N with one missing, find the missing number.
 //  Example: [1, 2, 3, 5] → 4
 
+// function findMissingNumber(array){
 
+//  for (let i = 0; i < array.length-1; i++) {
+//    if(array[i+1]-array[i]!==1) {
+//      return array[i]+1
+//    }
+//  }
 
-function findMissingNumber(array){
-   
- for (let i = 0; i < array.length-1; i++) {
-   if(array[i+1]-array[i]!==1) {
-     return array[i]+1
-   }
- }
+//   return NaN;
 
- 
-  return NaN;
+// }
 
+// console.log(findMissingNumber([1, 2,4, 5]))
+
+// Find the Longest Word in a Sentence
+// Q: Given a string, return the longest word.
+//  Example: "Web development is awesome" → "development"
+
+function findLongestWord(str) {
+  let split = str.split(" ");
+  let maxWord = split[0];
+
+  for (let i = 0; i < split.length; i++) {
+    if (maxWord.length < split[i].length) {
+      maxWord = split[i];
+    }
+  }
+
+  return maxWord;
 }
 
-
-console.log(findMissingNumber([1, 2,4, 5]))
-
+console.log(findLongestWord("Web development is awesome"));
