@@ -167,34 +167,70 @@ const data = [1, 2, 3, 4, 8, 10];
 //         newObj[i]=1
 //     }
 
-function objOccurenceCount(str) {
-  let obj = {};
+// function objOccurenceCount(str) {
+//   let obj = {};
 
-  for (const x of str) {
-    if (obj[x]) {
-      obj[x] += 1;
-    } else {
-      obj[x] = 1;
-    }
-  }
-  return obj;
-}
+//   for (const x of str) {
+//     if (obj[x]) {
+//       obj[x] += 1;
+//     } else {
+//       obj[x] = 1;
+//     }
+//   }
+//   return obj;
+// }
 
-const objResult = objOccurenceCount("aabbccddeeffg");
+// const objResult = objOccurenceCount("aabbccddeeffg");
 
-function findFirstUniqueChar(obj) {
+// function findFirstUniqueChar(obj) {
  
-  for (const key in obj) {
+//   for (const key in obj) {
     
-    if (obj[key] === 1) {
-      return key;
-    }
-  }
-}
+//     if (obj[key] === 1) {
+//       return key;
+//     }
+//   }
+// }
 
-console.log(findFirstUniqueChar(objResult));
+// console.log(findFirstUniqueChar(objResult));
 
 
-function checkValid() {
+// function checkValid() {
   
+// }
+
+//  Find the First Non-Repeating Character
+// Q: Given a string, find the first character that does not repeat.
+// Example: "aabbcdd" → "c"
+
+
+function firstCharacterRepeat(str){
+
+  console.log(str);
+
+  return "hello"
+
 }
+
+
+console.log(firstCharacterRepeat("hello"))
+
+
+
+// Check if Two Strings Are Anagrams
+// Q: Write a function to check if two strings are anagrams (contain the same characters in a different order).
+// 💡 Example: "listen", "silent" → true
+
+
+function checkStrAnagrams(str1,str2) {
+   
+  if(str1.length!==str2.length) {
+    return false
+  }
+
+   
+  return str1.split("").sort().join("") === str2.split("").sort().join("");
+
+}
+
+console.log(checkStrAnagrams("listen","silent"))
