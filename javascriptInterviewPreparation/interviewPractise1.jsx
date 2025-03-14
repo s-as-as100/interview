@@ -232,25 +232,49 @@ console.log(firstCharacterRepeat("hello"));
 
 // console.log(isSubset([1, 2, 3, 4, 5], [2, 3, 4]));
 
-function flatAnArray(array) {
+// function flatAnArray(array) {
  
-  let flatArray = [];
+//   let flatArray = [];
 
-  for (let i = 0; i < array.length; i++) {
+//   for (let i = 0; i < array.length; i++) {
 
-    if(Array.isArray(array[i])){
-     flatArray=  flatArray.concat(flatAnArray(array[i]))
-    }
-    else {
-      flatArray.push(array[i])
-    }
+//     if(Array.isArray(array[i])){
+//      flatArray=  flatArray.concat(flatAnArray(array[i]))
+//     }
+//     else {
+//       flatArray.push(array[i])
+//     }
+//    }
+
+//   return flatArray;
+// }
+
+// console.log(flatAnArray([
+//   [1, 2],
+//   [3, [4, 5]],
+// ])
+// )
+
+
+// Find Missing Number in an Array
+// Q: Given an array containing numbers from 1 to N with one missing, find the missing number.
+//  Example: [1, 2, 3, 5] → 4
+
+
+
+function findMissingNumber(array){
+   
+ for (let i = 0; i < array.length-1; i++) {
+   if(array[i+1]-array[i]!==1) {
+     return array[i]+1
    }
+ }
 
-  return flatArray;
+ 
+  return NaN;
+
 }
 
-console.log(flatAnArray([
-  [1, 2],
-  [3, [4, 5]],
-])
-)
+
+console.log(findMissingNumber([1, 2,4, 5]))
+
