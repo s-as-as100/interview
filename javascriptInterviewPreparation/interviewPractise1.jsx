@@ -183,9 +183,9 @@ const data = [1, 2, 3, 4, 8, 10];
 // const objResult = objOccurenceCount("aabbccddeeffg");
 
 // function findFirstUniqueChar(obj) {
- 
+
 //   for (const key in obj) {
-    
+
 //     if (obj[key] === 1) {
 //       return key;
 //     }
@@ -194,43 +194,63 @@ const data = [1, 2, 3, 4, 8, 10];
 
 // console.log(findFirstUniqueChar(objResult));
 
-
 // function checkValid() {
-  
+
 // }
 
 //  Find the First Non-Repeating Character
 // Q: Given a string, find the first character that does not repeat.
 // Example: "aabbcdd" → "c"
 
-
-function firstCharacterRepeat(str){
-
+function firstCharacterRepeat(str) {
   console.log(str);
 
-  return "hello"
-
+  return "hello";
 }
 
-
-console.log(firstCharacterRepeat("hello"))
-
-
+console.log(firstCharacterRepeat("hello"));
 
 // Check if Two Strings Are Anagrams
 // Q: Write a function to check if two strings are anagrams (contain the same characters in a different order).
 // 💡 Example: "listen", "silent" → true
 
+// function checkStrAnagrams(str1,str2) {
 
-function checkStrAnagrams(str1,str2) {
-   
-  if(str1.length!==str2.length) {
-    return false
-  }
+//   if(str1.length!==str2.length) {
+//     return false
+//   }
 
-   
-  return str1.split("").sort().join("") === str2.split("").sort().join("");
+//   return str1.split("").sort().join("") === str2.split("").sort().join("");
 
+// }
+
+// console.log(checkStrAnagrams("listen","silent"))
+
+// function isSubset(arr1, arr2) {
+//   return arr2.every((item) => arr1.includes(item));
+// }
+
+// console.log(isSubset([1, 2, 3, 4, 5], [2, 3, 4]));
+
+function flatAnArray(array) {
+ 
+  let flatArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+
+    if(Array.isArray(array[i])){
+     flatArray=  flatArray.concat(flatAnArray(array[i]))
+    }
+    else {
+      flatArray.push(array[i])
+    }
+   }
+
+  return flatArray;
 }
 
-console.log(checkStrAnagrams("listen","silent"))
+console.log(flatAnArray([
+  [1, 2],
+  [3, [4, 5]],
+])
+)
