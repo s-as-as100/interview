@@ -21,7 +21,7 @@
 
 // polyfill is technique is help for native browser support latest feature
 
-const data = [1, 2, 3, 4, 8, 10];
+// const data = [1, 2, 3, 4, 8, 10];
 
 // function callBackFnOfMap(el) {
 //   return el * 2;
@@ -202,13 +202,13 @@ const data = [1, 2, 3, 4, 8, 10];
 // Q: Given a string, find the first character that does not repeat.
 // Example: "aabbcdd" → "c"
 
-function firstCharacterRepeat(str) {
-  console.log(str);
+// function firstCharacterRepeat(str) {
+//   console.log(str);
 
-  return "hello";
-}
+//   return "hello";
+// }
 
-console.log(firstCharacterRepeat("hello"));
+// console.log(firstCharacterRepeat("hello"));
 
 // Check if Two Strings Are Anagrams
 // Q: Write a function to check if two strings are anagrams (contain the same characters in a different order).
@@ -277,17 +277,58 @@ console.log(firstCharacterRepeat("hello"));
 // Q: Given a string, return the longest word.
 //  Example: "Web development is awesome" → "development"
 
-function findLongestWord(str) {
-  let split = str.split(" ");
-  let maxWord = split[0];
+// function findLongestWord(str) {
+//   let split = str.split(" ");
+//   let maxWord = split[0];
 
-  for (let i = 0; i < split.length; i++) {
-    if (maxWord.length < split[i].length) {
-      maxWord = split[i];
+//   for (let i = 0; i < split.length; i++) {
+//     if (maxWord.length < split[i].length) {
+//       maxWord = split[i];
+//     }
+//   }
+
+//   return maxWord;
+// }
+
+// console.log(findLongestWord("Web development is awesome"));
+
+
+
+const obj1 = { a: 1, b: { x: 2, y: 3 }, c: 4 }; 
+const obj2 = { b: { x: 5, z: 6 }, d: 7 }; 
+// console.log(mergeObjects(obj1, obj2)); 
+//  { a: 1, b: { x: 5, y: 3 ,z:6}, c: 4,d:7 };
+
+
+function mergeTwoObject(obj1,obj2) {
+
+    let finalMergeObj={}
+
+    for (const x in obj1) {
+ 
+      finalMergeObj[x] = obj1[x];
+ 
     }
-  }
 
-  return maxWord;
+
+    for (const x in obj2) {
+      if(finalMergeObj[x]) {
+        finalMergeObj = obj2[x]
+      }
+         
+    }
+
+    console.log(finalMergeObj)
+
+
+    const final = {...obj1,finalMergeObj};
+    // console.log(obj1.b)
+
+    // console.log(final)
+    
+
+
+
 }
 
-console.log(findLongestWord("Web development is awesome"));
+mergeTwoObject(obj1,obj2)
