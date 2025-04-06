@@ -304,27 +304,15 @@ function mergeTwoObject(obj1,obj2) {
 
     let finalMergeObj={}
 
-    for (const x in obj1) {
- 
-      finalMergeObj[x] = obj1[x];
- 
+    for (const el in obj1) {
+      // console.log(el)
     }
 
-
-    for (const x in obj2) {
-      if(finalMergeObj[x]) {
-        finalMergeObj = obj2[x]
-      }
-         
-    }
-
-    console.log(finalMergeObj)
-
+     
+ 
 
     const final = {...obj1,finalMergeObj};
-    // console.log(obj1.b)
-
-    // console.log(final)
+     
     
 
 
@@ -332,3 +320,15 @@ function mergeTwoObject(obj1,obj2) {
 }
 
 mergeTwoObject(obj1,obj2)
+
+
+const merged = {
+  ...obj1,
+  ...obj2,
+  b: {
+    ...obj1.b,
+    ...obj2.b
+  }
+};
+
+console.log(merged,"nnnn");
