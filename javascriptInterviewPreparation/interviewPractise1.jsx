@@ -322,20 +322,41 @@
 
 // console.log(merged,"nnnn");
 
-const array = [1, 2, 3, [2, 3, [3, 4]]];
+// const array = [1, 2, 3, [2, 3, [3, 4]]];
 
-function flatAnArray(array) {
-  let flatArray = [];
+// function flatAnArray(array) {
+//   let flatArray = [];
 
-  for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      flatArray = flatArray.concat(flatAnArray(array[i]));
-    } else {
-      flatArray.push(array[i]);
-    }
+//   for (let i = 0; i < array.length; i++) {
+//     if (Array.isArray(array[i])) {
+//       flatArray = flatArray.concat(flatAnArray(array[i]));
+//     } else {
+//       flatArray.push(array[i]);
+//     }
+//   }
+
+//   return flatArray;
+// }
+
+// console.log(flatAnArray(array),"dddd");
+
+
+// Implement a function mean(array) that returns the mean (also known as average) of the values inside array, which is an array of numbers.
+
+
+const array =[1,2,3,4] ;
+
+function calculateMeanOfAnArray(array) {
+  let sum=0;
+  let lengthOfArray= array.length
+   for (let i = 0; i < array.length; i++) {
+       sum+=array[i]
   }
 
-  return flatArray;
+  let meanValue = sum/lengthOfArray;
+  return meanValue
+ 
+
 }
 
-console.log(flatAnArray(array),"dddd");
+console.log(calculateMeanOfAnArray(array))
