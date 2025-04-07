@@ -344,19 +344,43 @@
 // Implement a function mean(array) that returns the mean (also known as average) of the values inside array, which is an array of numbers.
 
 
-const array =[1,2,3,4] ;
+const array =[1,2,3,4,1] ;
 
-function calculateMeanOfAnArray(array) {
-  let sum=0;
-  let lengthOfArray= array.length
-   for (let i = 0; i < array.length; i++) {
-       sum+=array[i]
-  }
+// function calculateMeanOfAnArray(array) {
+//   let sum=0;
+//   let lengthOfArray= array.length
+//    for (let i = 0; i < array.length; i++) {
+//        sum+=array[i]
+//   }
 
-  let meanValue = sum/lengthOfArray;
-  return meanValue
+//   let meanValue = sum/lengthOfArray;
+//   return meanValue
  
 
+// }
+
+// console.log(calculateMeanOfAnArray(array))
+
+
+// Given an array of integers numbers, determine whether the array contains any duplicate values. 
+// A duplicate is defined as any number that appears more than once in the array.
+
+
+ 
+
+ 
+function checkDuplicateValuePresentOrNot(array) {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (newArray.includes(array[i])) {
+      return true; 
+    }
+    newArray.push(array[i]);
+  }
+
+  return false; 
 }
 
-console.log(calculateMeanOfAnArray(array))
+
+console.log(checkDuplicateValuePresentOrNot(array))
