@@ -292,43 +292,50 @@
 
 // console.log(findLongestWord("Web development is awesome"));
 
+// const obj1 = { a: 1, b: { x: 2, y: 3 }, c: 4 };
+// const obj2 = { b: { x: 5, z: 6 }, d: 7 };
+// // console.log(mergeObjects(obj1, obj2));
+// //  { a: 1, b: { x: 5, y: 3 ,z:6}, c: 4,d:7 };
 
+// function mergeTwoObject(obj1,obj2) {
 
-const obj1 = { a: 1, b: { x: 2, y: 3 }, c: 4 }; 
-const obj2 = { b: { x: 5, z: 6 }, d: 7 }; 
-// console.log(mergeObjects(obj1, obj2)); 
-//  { a: 1, b: { x: 5, y: 3 ,z:6}, c: 4,d:7 };
+//     let finalMergeObj={}
 
+//     for (const el in obj1) {
+//       // console.log(el)
+//     }
 
-function mergeTwoObject(obj1,obj2) {
+//     const final = {...obj1,finalMergeObj};
 
-    let finalMergeObj={}
+// }
 
-    for (const el in obj1) {
-      // console.log(el)
+// mergeTwoObject(obj1,obj2)
+
+// const merged = {
+//   ...obj1,
+//   ...obj2,
+//   b: {
+//     ...obj1.b,
+//     ...obj2.b
+//   }
+// };
+
+// console.log(merged,"nnnn");
+
+const array = [1, 2, 3, [2, 3, [3, 4]]];
+
+function flatAnArray(array) {
+  let flatArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      flatArray = flatArray.concat(flatAnArray(array[i]));
+    } else {
+      flatArray.push(array[i]);
     }
+  }
 
-     
- 
-
-    const final = {...obj1,finalMergeObj};
-     
-    
-
-
-
+  return flatArray;
 }
 
-mergeTwoObject(obj1,obj2)
-
-
-const merged = {
-  ...obj1,
-  ...obj2,
-  b: {
-    ...obj1.b,
-    ...obj2.b
-  }
-};
-
-console.log(merged,"nnnn");
+console.log(flatAnArray(array),"dddd");
